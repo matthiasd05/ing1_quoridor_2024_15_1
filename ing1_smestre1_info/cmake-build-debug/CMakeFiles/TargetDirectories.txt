@@ -1,0 +1,3 @@
+C:/Users/FlowUp/CLionProjects/ing1_smestre1_info/cmake-build-debug/CMakeFiles/ing1_smestre1_info.dir
+C:/Users/FlowUp/CLionProjects/ing1_smestre1_info/cmake-build-debug/CMakeFiles/edit_cache.dir
+C:/Users/FlowUp/CLionProjects/ing1_smestre1_info/cmake-build-debug/CMakeFiles/rebuild_cache.dir
