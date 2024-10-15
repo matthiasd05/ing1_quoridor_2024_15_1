@@ -10,4 +10,4 @@ int main(void)
     }
     return 0;
 }
-// COUCOU LES LOUSLOUS C4EST JP
+// bonjour je suis gentil
