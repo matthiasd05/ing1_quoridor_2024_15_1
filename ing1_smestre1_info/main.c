@@ -47,6 +47,6 @@ int main()
     printf("Hello world!\n");
     // et la derniere couleur reste jusqu'à ce qu'on change de nouveau
     printf("Hello world!\n");
-
+    printf("Hello world!\n");
     return 0;
 }
