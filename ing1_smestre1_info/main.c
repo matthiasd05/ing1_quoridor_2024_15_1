@@ -4,9 +4,9 @@
 int main(void)
 {
     printf("Hello, World!\n");
-    while(1) {
+    for (int i;i<20;i++)
+    {
         printf("NAN C4EST MORT\n");
-        sleep(1);
     }
     return 0;
 }
