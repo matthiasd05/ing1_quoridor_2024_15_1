@@ -1,22 +1,48 @@
 #include <stdio.h>
-#include "jeux.h"
 #include "joueur.h"
 #include "plateau.h"
-void nouvellepartie(){
+#include "jeux.h"
+
+/**
+ * @brief Lance une nouvelle partie du jeu.
+ */
+void nouvellepartie() {
     int nombredejoueur;
-    printf("Entrez le nombre de joueur (2 ou 4): \n");
-    scanf("%d",&nombredejoueur);
+    printf("Entrez le nombre de joueurs (2 ou 4): \n");
+    scanf("%d", &nombredejoueur);
 
-}
-void chargerpartie(){
+    if (nombredejoueur != 2 && nombredejoueur != 4) {
+        printf("Nombre de joueurs invalide. Veuillez entrer 2 ou 4.\n");
+        return;
+    }
 
-}
-void afficheraide(){
+    Joueur joueurs[nombredejoueur];
+    creerjoueur(joueurs, nombredejoueur);
 
-}
-void afficherscore(){
+    // Initialisation du plateau
+    CasePlateau plateau[TAILLE_PLATEAU][TAILLE_PLATEAU];
+    initialisationplateau(plateau);
 
-}
-void quitterlejeu(){
+    // Positionnement des pions des joueurs sur le plateau
+    for (int i = 0; i < nombredejoueur; i++) {
+        int x = joueurs[i].positionX;
+        int y = joueurs[i].positionY;
+        plateau[y][x].type = PION;
+        plateau[y][x].symbole = joueurs[i].pion;
+    }
 
+    // Lancer la boucle principale du jeu
+    bool finDePartie = false;
+    while (!finDePartie) {
+        for (int i = 0; i < nombredejoueur; i++) {
+            afficherplateau(plateau, joueurs, nombredejoueur);
+            jouerTour(&joueurs[i], plateau, joueurs, nombredejoueur);
+            finDePartie = verifierFinDePartie(&joueurs[i]);
+            if (finDePartie) {
+                printf("Le joueur %s a gagné!\n", joueurs[i].nom);
+                // Calcul des scores et sauvegarde
+                break;
+            }
+        }
+    }
 }

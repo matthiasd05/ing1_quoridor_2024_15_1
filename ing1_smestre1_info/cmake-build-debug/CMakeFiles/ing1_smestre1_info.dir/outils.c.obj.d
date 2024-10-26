@@ -1,5 +1,6 @@
-CMakeFiles/ing1_smestre1_info.dir/main.c.obj: \
- C:\Users\FlowUp\Documents\GitHub\ing1_quoridor_2024_15_1\ing1_smestre1_info\main.c \
+CMakeFiles/ing1_smestre1_info.dir/outils.c.obj: \
+ C:\Users\FlowUp\Documents\GitHub\ing1_quoridor_2024_15_1\ing1_smestre1_info\outils.c \
+ C:\Users\FlowUp\Documents\GitHub\ing1_quoridor_2024_15_1\ing1_smestre1_info\outils.h \
  C:/Program\ Files/JetBrains/CLion\ 2024.2.2/bin/mingw/x86_64-w64-mingw32/include/windows.h \
  C:/Program\ Files/JetBrains/CLion\ 2024.2.2/bin/mingw/x86_64-w64-mingw32/include/_mingw.h \
  C:/Program\ Files/JetBrains/CLion\ 2024.2.2/bin/mingw/x86_64-w64-mingw32/include/_mingw_mac.h \
@@ -265,6 +266,8 @@ CMakeFiles/ing1_smestre1_info.dir/main.c.obj: \
  C:/Program\ Files/JetBrains/CLion\ 2024.2.2/bin/mingw/x86_64-w64-mingw32/include/winsvc.h \
  C:/Program\ Files/JetBrains/CLion\ 2024.2.2/bin/mingw/x86_64-w64-mingw32/include/mcx.h \
  C:/Program\ Files/JetBrains/CLion\ 2024.2.2/bin/mingw/x86_64-w64-mingw32/include/imm.h \
- C:\Users\FlowUp\Documents\GitHub\ing1_quoridor_2024_15_1\ing1_smestre1_info\plateau.h \
- C:/Program\ Files/JetBrains/CLion\ 2024.2.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/stdbool.h \
- C:\Users\FlowUp\Documents\GitHub\ing1_quoridor_2024_15_1\ing1_smestre1_info\joueur.h
+ C:/Program\ Files/JetBrains/CLion\ 2024.2.2/bin/mingw/x86_64-w64-mingw32/include/stdio.h \
+ C:/Program\ Files/JetBrains/CLion\ 2024.2.2/bin/mingw/x86_64-w64-mingw32/include/corecrt_stdio_config.h \
+ C:/Program\ Files/JetBrains/CLion\ 2024.2.2/bin/mingw/x86_64-w64-mingw32/include/_mingw_off_t.h \
+ C:/Program\ Files/JetBrains/CLion\ 2024.2.2/bin/mingw/x86_64-w64-mingw32/include/swprintf.inl \
+ C:/Program\ Files/JetBrains/CLion\ 2024.2.2/bin/mingw/x86_64-w64-mingw32/include/sec_api/stdio_s.h

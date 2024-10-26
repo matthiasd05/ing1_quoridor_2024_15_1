@@ -224,6 +224,30 @@ menu.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\ing1_smestre1_info.dir\build.make CMakeFiles/ing1_smestre1_info.dir/menu.c.s
 .PHONY : menu.c.s
 
+outils.obj: outils.c.obj
+.PHONY : outils.obj
+
+# target to build an object file
+outils.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\ing1_smestre1_info.dir\build.make CMakeFiles/ing1_smestre1_info.dir/outils.c.obj
+.PHONY : outils.c.obj
+
+outils.i: outils.c.i
+.PHONY : outils.i
+
+# target to preprocess a source file
+outils.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\ing1_smestre1_info.dir\build.make CMakeFiles/ing1_smestre1_info.dir/outils.c.i
+.PHONY : outils.c.i
+
+outils.s: outils.c.s
+.PHONY : outils.s
+
+# target to generate assembly for a file
+outils.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\ing1_smestre1_info.dir\build.make CMakeFiles/ing1_smestre1_info.dir/outils.c.s
+.PHONY : outils.c.s
+
 plateau.obj: plateau.c.obj
 .PHONY : plateau.obj
 
@@ -269,6 +293,9 @@ help:
 	@echo ... menu.obj
 	@echo ... menu.i
 	@echo ... menu.s
+	@echo ... outils.obj
+	@echo ... outils.i
+	@echo ... outils.s
 	@echo ... plateau.obj
 	@echo ... plateau.i
 	@echo ... plateau.s
