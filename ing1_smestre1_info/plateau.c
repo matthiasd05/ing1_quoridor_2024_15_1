@@ -22,7 +22,7 @@ void afficherplateau(CasePlateau plateau[TAILLE_PLATEAU][TAILLE_PLATEAU], Joueur
     // Afficher la numérotation des colonnes
     printf("     ");
     for (int col = 0; col < TAILLE_PLATEAU; col++) {
-        printf("  %2d ", col);
+        printf("  %2d  ", col);
     }
     printf("\n");
 
@@ -40,7 +40,7 @@ void afficherplateau(CasePlateau plateau[TAILLE_PLATEAU][TAILLE_PLATEAU], Joueur
         printf("\n");
 
         // Affichage du numéro de ligne
-        printf("%2d   ", lig);
+        printf("  %2d  ", lig);
 
         // Affichage des barrières verticales et des cases
         for (int col = 0; col < TAILLE_PLATEAU; col++) {
