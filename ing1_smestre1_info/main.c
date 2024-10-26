@@ -16,6 +16,7 @@ void Color(int couleurDuTexte,int couleurDeFond) // fonction d'affichage de coul
 
 int main()
 {
+
     /*
     0 : Noir
     1 : Bleu foncé
@@ -46,6 +47,7 @@ int main()
     Color(11, 0);
     printf("Hello world!\n");
     // et la derniere couleur reste jusqu'à ce qu'on change de nouveau
+    Color(5, 0);
     printf("Hello world!\n");
     printf("Hello world!\n");
     return 0;
