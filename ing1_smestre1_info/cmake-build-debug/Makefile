@@ -128,101 +128,53 @@ ing1_smestre1_info/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\ing1_smestre1_info.dir\build.make CMakeFiles/ing1_smestre1_info.dir/build
 .PHONY : ing1_smestre1_info/fast
 
-C_/Users/FlowUp/Documents/GitHub/ing1_quoridor_2024_15_1/jeux.obj: C_/Users/FlowUp/Documents/GitHub/ing1_quoridor_2024_15_1/jeux.c.obj
-.PHONY : C_/Users/FlowUp/Documents/GitHub/ing1_quoridor_2024_15_1/jeux.obj
+jeux.obj: jeux.c.obj
+.PHONY : jeux.obj
 
 # target to build an object file
-C_/Users/FlowUp/Documents/GitHub/ing1_quoridor_2024_15_1/jeux.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\ing1_smestre1_info.dir\build.make CMakeFiles/ing1_smestre1_info.dir/C_/Users/FlowUp/Documents/GitHub/ing1_quoridor_2024_15_1/jeux.c.obj
-.PHONY : C_/Users/FlowUp/Documents/GitHub/ing1_quoridor_2024_15_1/jeux.c.obj
+jeux.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\ing1_smestre1_info.dir\build.make CMakeFiles/ing1_smestre1_info.dir/jeux.c.obj
+.PHONY : jeux.c.obj
 
-C_/Users/FlowUp/Documents/GitHub/ing1_quoridor_2024_15_1/jeux.i: C_/Users/FlowUp/Documents/GitHub/ing1_quoridor_2024_15_1/jeux.c.i
-.PHONY : C_/Users/FlowUp/Documents/GitHub/ing1_quoridor_2024_15_1/jeux.i
+jeux.i: jeux.c.i
+.PHONY : jeux.i
 
 # target to preprocess a source file
-C_/Users/FlowUp/Documents/GitHub/ing1_quoridor_2024_15_1/jeux.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\ing1_smestre1_info.dir\build.make CMakeFiles/ing1_smestre1_info.dir/C_/Users/FlowUp/Documents/GitHub/ing1_quoridor_2024_15_1/jeux.c.i
-.PHONY : C_/Users/FlowUp/Documents/GitHub/ing1_quoridor_2024_15_1/jeux.c.i
+jeux.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\ing1_smestre1_info.dir\build.make CMakeFiles/ing1_smestre1_info.dir/jeux.c.i
+.PHONY : jeux.c.i
 
-C_/Users/FlowUp/Documents/GitHub/ing1_quoridor_2024_15_1/jeux.s: C_/Users/FlowUp/Documents/GitHub/ing1_quoridor_2024_15_1/jeux.c.s
-.PHONY : C_/Users/FlowUp/Documents/GitHub/ing1_quoridor_2024_15_1/jeux.s
+jeux.s: jeux.c.s
+.PHONY : jeux.s
 
 # target to generate assembly for a file
-C_/Users/FlowUp/Documents/GitHub/ing1_quoridor_2024_15_1/jeux.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\ing1_smestre1_info.dir\build.make CMakeFiles/ing1_smestre1_info.dir/C_/Users/FlowUp/Documents/GitHub/ing1_quoridor_2024_15_1/jeux.c.s
-.PHONY : C_/Users/FlowUp/Documents/GitHub/ing1_quoridor_2024_15_1/jeux.c.s
+jeux.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\ing1_smestre1_info.dir\build.make CMakeFiles/ing1_smestre1_info.dir/jeux.c.s
+.PHONY : jeux.c.s
 
-C_/Users/FlowUp/Documents/GitHub/ing1_quoridor_2024_15_1/joueur.obj: C_/Users/FlowUp/Documents/GitHub/ing1_quoridor_2024_15_1/joueur.c.obj
-.PHONY : C_/Users/FlowUp/Documents/GitHub/ing1_quoridor_2024_15_1/joueur.obj
+joueur.obj: joueur.c.obj
+.PHONY : joueur.obj
 
 # target to build an object file
-C_/Users/FlowUp/Documents/GitHub/ing1_quoridor_2024_15_1/joueur.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\ing1_smestre1_info.dir\build.make CMakeFiles/ing1_smestre1_info.dir/C_/Users/FlowUp/Documents/GitHub/ing1_quoridor_2024_15_1/joueur.c.obj
-.PHONY : C_/Users/FlowUp/Documents/GitHub/ing1_quoridor_2024_15_1/joueur.c.obj
+joueur.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\ing1_smestre1_info.dir\build.make CMakeFiles/ing1_smestre1_info.dir/joueur.c.obj
+.PHONY : joueur.c.obj
 
-C_/Users/FlowUp/Documents/GitHub/ing1_quoridor_2024_15_1/joueur.i: C_/Users/FlowUp/Documents/GitHub/ing1_quoridor_2024_15_1/joueur.c.i
-.PHONY : C_/Users/FlowUp/Documents/GitHub/ing1_quoridor_2024_15_1/joueur.i
-
-# target to preprocess a source file
-C_/Users/FlowUp/Documents/GitHub/ing1_quoridor_2024_15_1/joueur.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\ing1_smestre1_info.dir\build.make CMakeFiles/ing1_smestre1_info.dir/C_/Users/FlowUp/Documents/GitHub/ing1_quoridor_2024_15_1/joueur.c.i
-.PHONY : C_/Users/FlowUp/Documents/GitHub/ing1_quoridor_2024_15_1/joueur.c.i
-
-C_/Users/FlowUp/Documents/GitHub/ing1_quoridor_2024_15_1/joueur.s: C_/Users/FlowUp/Documents/GitHub/ing1_quoridor_2024_15_1/joueur.c.s
-.PHONY : C_/Users/FlowUp/Documents/GitHub/ing1_quoridor_2024_15_1/joueur.s
-
-# target to generate assembly for a file
-C_/Users/FlowUp/Documents/GitHub/ing1_quoridor_2024_15_1/joueur.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\ing1_smestre1_info.dir\build.make CMakeFiles/ing1_smestre1_info.dir/C_/Users/FlowUp/Documents/GitHub/ing1_quoridor_2024_15_1/joueur.c.s
-.PHONY : C_/Users/FlowUp/Documents/GitHub/ing1_quoridor_2024_15_1/joueur.c.s
-
-C_/Users/FlowUp/Documents/GitHub/ing1_quoridor_2024_15_1/menu.obj: C_/Users/FlowUp/Documents/GitHub/ing1_quoridor_2024_15_1/menu.c.obj
-.PHONY : C_/Users/FlowUp/Documents/GitHub/ing1_quoridor_2024_15_1/menu.obj
-
-# target to build an object file
-C_/Users/FlowUp/Documents/GitHub/ing1_quoridor_2024_15_1/menu.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\ing1_smestre1_info.dir\build.make CMakeFiles/ing1_smestre1_info.dir/C_/Users/FlowUp/Documents/GitHub/ing1_quoridor_2024_15_1/menu.c.obj
-.PHONY : C_/Users/FlowUp/Documents/GitHub/ing1_quoridor_2024_15_1/menu.c.obj
-
-C_/Users/FlowUp/Documents/GitHub/ing1_quoridor_2024_15_1/menu.i: C_/Users/FlowUp/Documents/GitHub/ing1_quoridor_2024_15_1/menu.c.i
-.PHONY : C_/Users/FlowUp/Documents/GitHub/ing1_quoridor_2024_15_1/menu.i
+joueur.i: joueur.c.i
+.PHONY : joueur.i
 
 # target to preprocess a source file
-C_/Users/FlowUp/Documents/GitHub/ing1_quoridor_2024_15_1/menu.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\ing1_smestre1_info.dir\build.make CMakeFiles/ing1_smestre1_info.dir/C_/Users/FlowUp/Documents/GitHub/ing1_quoridor_2024_15_1/menu.c.i
-.PHONY : C_/Users/FlowUp/Documents/GitHub/ing1_quoridor_2024_15_1/menu.c.i
+joueur.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\ing1_smestre1_info.dir\build.make CMakeFiles/ing1_smestre1_info.dir/joueur.c.i
+.PHONY : joueur.c.i
 
-C_/Users/FlowUp/Documents/GitHub/ing1_quoridor_2024_15_1/menu.s: C_/Users/FlowUp/Documents/GitHub/ing1_quoridor_2024_15_1/menu.c.s
-.PHONY : C_/Users/FlowUp/Documents/GitHub/ing1_quoridor_2024_15_1/menu.s
-
-# target to generate assembly for a file
-C_/Users/FlowUp/Documents/GitHub/ing1_quoridor_2024_15_1/menu.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\ing1_smestre1_info.dir\build.make CMakeFiles/ing1_smestre1_info.dir/C_/Users/FlowUp/Documents/GitHub/ing1_quoridor_2024_15_1/menu.c.s
-.PHONY : C_/Users/FlowUp/Documents/GitHub/ing1_quoridor_2024_15_1/menu.c.s
-
-C_/Users/FlowUp/Documents/GitHub/ing1_quoridor_2024_15_1/plateau.obj: C_/Users/FlowUp/Documents/GitHub/ing1_quoridor_2024_15_1/plateau.c.obj
-.PHONY : C_/Users/FlowUp/Documents/GitHub/ing1_quoridor_2024_15_1/plateau.obj
-
-# target to build an object file
-C_/Users/FlowUp/Documents/GitHub/ing1_quoridor_2024_15_1/plateau.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\ing1_smestre1_info.dir\build.make CMakeFiles/ing1_smestre1_info.dir/C_/Users/FlowUp/Documents/GitHub/ing1_quoridor_2024_15_1/plateau.c.obj
-.PHONY : C_/Users/FlowUp/Documents/GitHub/ing1_quoridor_2024_15_1/plateau.c.obj
-
-C_/Users/FlowUp/Documents/GitHub/ing1_quoridor_2024_15_1/plateau.i: C_/Users/FlowUp/Documents/GitHub/ing1_quoridor_2024_15_1/plateau.c.i
-.PHONY : C_/Users/FlowUp/Documents/GitHub/ing1_quoridor_2024_15_1/plateau.i
-
-# target to preprocess a source file
-C_/Users/FlowUp/Documents/GitHub/ing1_quoridor_2024_15_1/plateau.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\ing1_smestre1_info.dir\build.make CMakeFiles/ing1_smestre1_info.dir/C_/Users/FlowUp/Documents/GitHub/ing1_quoridor_2024_15_1/plateau.c.i
-.PHONY : C_/Users/FlowUp/Documents/GitHub/ing1_quoridor_2024_15_1/plateau.c.i
-
-C_/Users/FlowUp/Documents/GitHub/ing1_quoridor_2024_15_1/plateau.s: C_/Users/FlowUp/Documents/GitHub/ing1_quoridor_2024_15_1/plateau.c.s
-.PHONY : C_/Users/FlowUp/Documents/GitHub/ing1_quoridor_2024_15_1/plateau.s
+joueur.s: joueur.c.s
+.PHONY : joueur.s
 
 # target to generate assembly for a file
-C_/Users/FlowUp/Documents/GitHub/ing1_quoridor_2024_15_1/plateau.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\ing1_smestre1_info.dir\build.make CMakeFiles/ing1_smestre1_info.dir/C_/Users/FlowUp/Documents/GitHub/ing1_quoridor_2024_15_1/plateau.c.s
-.PHONY : C_/Users/FlowUp/Documents/GitHub/ing1_quoridor_2024_15_1/plateau.c.s
+joueur.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\ing1_smestre1_info.dir\build.make CMakeFiles/ing1_smestre1_info.dir/joueur.c.s
+.PHONY : joueur.c.s
 
 main.obj: main.c.obj
 .PHONY : main.obj
@@ -248,6 +200,54 @@ main.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\ing1_smestre1_info.dir\build.make CMakeFiles/ing1_smestre1_info.dir/main.c.s
 .PHONY : main.c.s
 
+menu.obj: menu.c.obj
+.PHONY : menu.obj
+
+# target to build an object file
+menu.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\ing1_smestre1_info.dir\build.make CMakeFiles/ing1_smestre1_info.dir/menu.c.obj
+.PHONY : menu.c.obj
+
+menu.i: menu.c.i
+.PHONY : menu.i
+
+# target to preprocess a source file
+menu.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\ing1_smestre1_info.dir\build.make CMakeFiles/ing1_smestre1_info.dir/menu.c.i
+.PHONY : menu.c.i
+
+menu.s: menu.c.s
+.PHONY : menu.s
+
+# target to generate assembly for a file
+menu.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\ing1_smestre1_info.dir\build.make CMakeFiles/ing1_smestre1_info.dir/menu.c.s
+.PHONY : menu.c.s
+
+plateau.obj: plateau.c.obj
+.PHONY : plateau.obj
+
+# target to build an object file
+plateau.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\ing1_smestre1_info.dir\build.make CMakeFiles/ing1_smestre1_info.dir/plateau.c.obj
+.PHONY : plateau.c.obj
+
+plateau.i: plateau.c.i
+.PHONY : plateau.i
+
+# target to preprocess a source file
+plateau.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\ing1_smestre1_info.dir\build.make CMakeFiles/ing1_smestre1_info.dir/plateau.c.i
+.PHONY : plateau.c.i
+
+plateau.s: plateau.c.s
+.PHONY : plateau.s
+
+# target to generate assembly for a file
+plateau.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\ing1_smestre1_info.dir\build.make CMakeFiles/ing1_smestre1_info.dir/plateau.c.s
+.PHONY : plateau.c.s
+
 # Help Target
 help:
 	@echo The following are some of the valid targets for this Makefile:
@@ -257,21 +257,21 @@ help:
 	@echo ... edit_cache
 	@echo ... rebuild_cache
 	@echo ... ing1_smestre1_info
-	@echo ... C_/Users/FlowUp/Documents/GitHub/ing1_quoridor_2024_15_1/jeux.obj
-	@echo ... C_/Users/FlowUp/Documents/GitHub/ing1_quoridor_2024_15_1/jeux.i
-	@echo ... C_/Users/FlowUp/Documents/GitHub/ing1_quoridor_2024_15_1/jeux.s
-	@echo ... C_/Users/FlowUp/Documents/GitHub/ing1_quoridor_2024_15_1/joueur.obj
-	@echo ... C_/Users/FlowUp/Documents/GitHub/ing1_quoridor_2024_15_1/joueur.i
-	@echo ... C_/Users/FlowUp/Documents/GitHub/ing1_quoridor_2024_15_1/joueur.s
-	@echo ... C_/Users/FlowUp/Documents/GitHub/ing1_quoridor_2024_15_1/menu.obj
-	@echo ... C_/Users/FlowUp/Documents/GitHub/ing1_quoridor_2024_15_1/menu.i
-	@echo ... C_/Users/FlowUp/Documents/GitHub/ing1_quoridor_2024_15_1/menu.s
-	@echo ... C_/Users/FlowUp/Documents/GitHub/ing1_quoridor_2024_15_1/plateau.obj
-	@echo ... C_/Users/FlowUp/Documents/GitHub/ing1_quoridor_2024_15_1/plateau.i
-	@echo ... C_/Users/FlowUp/Documents/GitHub/ing1_quoridor_2024_15_1/plateau.s
+	@echo ... jeux.obj
+	@echo ... jeux.i
+	@echo ... jeux.s
+	@echo ... joueur.obj
+	@echo ... joueur.i
+	@echo ... joueur.s
 	@echo ... main.obj
 	@echo ... main.i
 	@echo ... main.s
+	@echo ... menu.obj
+	@echo ... menu.i
+	@echo ... menu.s
+	@echo ... plateau.obj
+	@echo ... plateau.i
+	@echo ... plateau.s
 .PHONY : help
 
 

@@ -82,78 +82,78 @@ CMakeFiles/ing1_smestre1_info.dir/main.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/ing1_smestre1_info.dir/main.c.s"
 	C:\PROGRA~1\JETBRA~1\CLION2~1.2\bin\mingw\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S C:\Users\FlowUp\Documents\GitHub\ing1_quoridor_2024_15_1\ing1_smestre1_info\main.c -o CMakeFiles\ing1_smestre1_info.dir\main.c.s
 
-CMakeFiles/ing1_smestre1_info.dir/C_/Users/FlowUp/Documents/GitHub/ing1_quoridor_2024_15_1/menu.c.obj: CMakeFiles/ing1_smestre1_info.dir/flags.make
-CMakeFiles/ing1_smestre1_info.dir/C_/Users/FlowUp/Documents/GitHub/ing1_quoridor_2024_15_1/menu.c.obj: C:/Users/FlowUp/Documents/GitHub/ing1_quoridor_2024_15_1/menu.c
-CMakeFiles/ing1_smestre1_info.dir/C_/Users/FlowUp/Documents/GitHub/ing1_quoridor_2024_15_1/menu.c.obj: CMakeFiles/ing1_smestre1_info.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\FlowUp\Documents\GitHub\ing1_quoridor_2024_15_1\ing1_smestre1_info\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object CMakeFiles/ing1_smestre1_info.dir/C_/Users/FlowUp/Documents/GitHub/ing1_quoridor_2024_15_1/menu.c.obj"
-	C:\PROGRA~1\JETBRA~1\CLION2~1.2\bin\mingw\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/ing1_smestre1_info.dir/C_/Users/FlowUp/Documents/GitHub/ing1_quoridor_2024_15_1/menu.c.obj -MF CMakeFiles\ing1_smestre1_info.dir\C_\Users\FlowUp\Documents\GitHub\ing1_quoridor_2024_15_1\menu.c.obj.d -o CMakeFiles\ing1_smestre1_info.dir\C_\Users\FlowUp\Documents\GitHub\ing1_quoridor_2024_15_1\menu.c.obj -c C:\Users\FlowUp\Documents\GitHub\ing1_quoridor_2024_15_1\menu.c
+CMakeFiles/ing1_smestre1_info.dir/menu.c.obj: CMakeFiles/ing1_smestre1_info.dir/flags.make
+CMakeFiles/ing1_smestre1_info.dir/menu.c.obj: C:/Users/FlowUp/Documents/GitHub/ing1_quoridor_2024_15_1/ing1_smestre1_info/menu.c
+CMakeFiles/ing1_smestre1_info.dir/menu.c.obj: CMakeFiles/ing1_smestre1_info.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\FlowUp\Documents\GitHub\ing1_quoridor_2024_15_1\ing1_smestre1_info\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object CMakeFiles/ing1_smestre1_info.dir/menu.c.obj"
+	C:\PROGRA~1\JETBRA~1\CLION2~1.2\bin\mingw\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/ing1_smestre1_info.dir/menu.c.obj -MF CMakeFiles\ing1_smestre1_info.dir\menu.c.obj.d -o CMakeFiles\ing1_smestre1_info.dir\menu.c.obj -c C:\Users\FlowUp\Documents\GitHub\ing1_quoridor_2024_15_1\ing1_smestre1_info\menu.c
 
-CMakeFiles/ing1_smestre1_info.dir/C_/Users/FlowUp/Documents/GitHub/ing1_quoridor_2024_15_1/menu.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/ing1_smestre1_info.dir/C_/Users/FlowUp/Documents/GitHub/ing1_quoridor_2024_15_1/menu.c.i"
-	C:\PROGRA~1\JETBRA~1\CLION2~1.2\bin\mingw\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E C:\Users\FlowUp\Documents\GitHub\ing1_quoridor_2024_15_1\menu.c > CMakeFiles\ing1_smestre1_info.dir\C_\Users\FlowUp\Documents\GitHub\ing1_quoridor_2024_15_1\menu.c.i
+CMakeFiles/ing1_smestre1_info.dir/menu.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/ing1_smestre1_info.dir/menu.c.i"
+	C:\PROGRA~1\JETBRA~1\CLION2~1.2\bin\mingw\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E C:\Users\FlowUp\Documents\GitHub\ing1_quoridor_2024_15_1\ing1_smestre1_info\menu.c > CMakeFiles\ing1_smestre1_info.dir\menu.c.i
 
-CMakeFiles/ing1_smestre1_info.dir/C_/Users/FlowUp/Documents/GitHub/ing1_quoridor_2024_15_1/menu.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/ing1_smestre1_info.dir/C_/Users/FlowUp/Documents/GitHub/ing1_quoridor_2024_15_1/menu.c.s"
-	C:\PROGRA~1\JETBRA~1\CLION2~1.2\bin\mingw\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S C:\Users\FlowUp\Documents\GitHub\ing1_quoridor_2024_15_1\menu.c -o CMakeFiles\ing1_smestre1_info.dir\C_\Users\FlowUp\Documents\GitHub\ing1_quoridor_2024_15_1\menu.c.s
+CMakeFiles/ing1_smestre1_info.dir/menu.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/ing1_smestre1_info.dir/menu.c.s"
+	C:\PROGRA~1\JETBRA~1\CLION2~1.2\bin\mingw\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S C:\Users\FlowUp\Documents\GitHub\ing1_quoridor_2024_15_1\ing1_smestre1_info\menu.c -o CMakeFiles\ing1_smestre1_info.dir\menu.c.s
 
-CMakeFiles/ing1_smestre1_info.dir/C_/Users/FlowUp/Documents/GitHub/ing1_quoridor_2024_15_1/joueur.c.obj: CMakeFiles/ing1_smestre1_info.dir/flags.make
-CMakeFiles/ing1_smestre1_info.dir/C_/Users/FlowUp/Documents/GitHub/ing1_quoridor_2024_15_1/joueur.c.obj: C:/Users/FlowUp/Documents/GitHub/ing1_quoridor_2024_15_1/joueur.c
-CMakeFiles/ing1_smestre1_info.dir/C_/Users/FlowUp/Documents/GitHub/ing1_quoridor_2024_15_1/joueur.c.obj: CMakeFiles/ing1_smestre1_info.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\FlowUp\Documents\GitHub\ing1_quoridor_2024_15_1\ing1_smestre1_info\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building C object CMakeFiles/ing1_smestre1_info.dir/C_/Users/FlowUp/Documents/GitHub/ing1_quoridor_2024_15_1/joueur.c.obj"
-	C:\PROGRA~1\JETBRA~1\CLION2~1.2\bin\mingw\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/ing1_smestre1_info.dir/C_/Users/FlowUp/Documents/GitHub/ing1_quoridor_2024_15_1/joueur.c.obj -MF CMakeFiles\ing1_smestre1_info.dir\C_\Users\FlowUp\Documents\GitHub\ing1_quoridor_2024_15_1\joueur.c.obj.d -o CMakeFiles\ing1_smestre1_info.dir\C_\Users\FlowUp\Documents\GitHub\ing1_quoridor_2024_15_1\joueur.c.obj -c C:\Users\FlowUp\Documents\GitHub\ing1_quoridor_2024_15_1\joueur.c
+CMakeFiles/ing1_smestre1_info.dir/joueur.c.obj: CMakeFiles/ing1_smestre1_info.dir/flags.make
+CMakeFiles/ing1_smestre1_info.dir/joueur.c.obj: C:/Users/FlowUp/Documents/GitHub/ing1_quoridor_2024_15_1/ing1_smestre1_info/joueur.c
+CMakeFiles/ing1_smestre1_info.dir/joueur.c.obj: CMakeFiles/ing1_smestre1_info.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\FlowUp\Documents\GitHub\ing1_quoridor_2024_15_1\ing1_smestre1_info\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building C object CMakeFiles/ing1_smestre1_info.dir/joueur.c.obj"
+	C:\PROGRA~1\JETBRA~1\CLION2~1.2\bin\mingw\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/ing1_smestre1_info.dir/joueur.c.obj -MF CMakeFiles\ing1_smestre1_info.dir\joueur.c.obj.d -o CMakeFiles\ing1_smestre1_info.dir\joueur.c.obj -c C:\Users\FlowUp\Documents\GitHub\ing1_quoridor_2024_15_1\ing1_smestre1_info\joueur.c
 
-CMakeFiles/ing1_smestre1_info.dir/C_/Users/FlowUp/Documents/GitHub/ing1_quoridor_2024_15_1/joueur.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/ing1_smestre1_info.dir/C_/Users/FlowUp/Documents/GitHub/ing1_quoridor_2024_15_1/joueur.c.i"
-	C:\PROGRA~1\JETBRA~1\CLION2~1.2\bin\mingw\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E C:\Users\FlowUp\Documents\GitHub\ing1_quoridor_2024_15_1\joueur.c > CMakeFiles\ing1_smestre1_info.dir\C_\Users\FlowUp\Documents\GitHub\ing1_quoridor_2024_15_1\joueur.c.i
+CMakeFiles/ing1_smestre1_info.dir/joueur.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/ing1_smestre1_info.dir/joueur.c.i"
+	C:\PROGRA~1\JETBRA~1\CLION2~1.2\bin\mingw\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E C:\Users\FlowUp\Documents\GitHub\ing1_quoridor_2024_15_1\ing1_smestre1_info\joueur.c > CMakeFiles\ing1_smestre1_info.dir\joueur.c.i
 
-CMakeFiles/ing1_smestre1_info.dir/C_/Users/FlowUp/Documents/GitHub/ing1_quoridor_2024_15_1/joueur.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/ing1_smestre1_info.dir/C_/Users/FlowUp/Documents/GitHub/ing1_quoridor_2024_15_1/joueur.c.s"
-	C:\PROGRA~1\JETBRA~1\CLION2~1.2\bin\mingw\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S C:\Users\FlowUp\Documents\GitHub\ing1_quoridor_2024_15_1\joueur.c -o CMakeFiles\ing1_smestre1_info.dir\C_\Users\FlowUp\Documents\GitHub\ing1_quoridor_2024_15_1\joueur.c.s
+CMakeFiles/ing1_smestre1_info.dir/joueur.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/ing1_smestre1_info.dir/joueur.c.s"
+	C:\PROGRA~1\JETBRA~1\CLION2~1.2\bin\mingw\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S C:\Users\FlowUp\Documents\GitHub\ing1_quoridor_2024_15_1\ing1_smestre1_info\joueur.c -o CMakeFiles\ing1_smestre1_info.dir\joueur.c.s
 
-CMakeFiles/ing1_smestre1_info.dir/C_/Users/FlowUp/Documents/GitHub/ing1_quoridor_2024_15_1/jeux.c.obj: CMakeFiles/ing1_smestre1_info.dir/flags.make
-CMakeFiles/ing1_smestre1_info.dir/C_/Users/FlowUp/Documents/GitHub/ing1_quoridor_2024_15_1/jeux.c.obj: C:/Users/FlowUp/Documents/GitHub/ing1_quoridor_2024_15_1/jeux.c
-CMakeFiles/ing1_smestre1_info.dir/C_/Users/FlowUp/Documents/GitHub/ing1_quoridor_2024_15_1/jeux.c.obj: CMakeFiles/ing1_smestre1_info.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\FlowUp\Documents\GitHub\ing1_quoridor_2024_15_1\ing1_smestre1_info\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building C object CMakeFiles/ing1_smestre1_info.dir/C_/Users/FlowUp/Documents/GitHub/ing1_quoridor_2024_15_1/jeux.c.obj"
-	C:\PROGRA~1\JETBRA~1\CLION2~1.2\bin\mingw\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/ing1_smestre1_info.dir/C_/Users/FlowUp/Documents/GitHub/ing1_quoridor_2024_15_1/jeux.c.obj -MF CMakeFiles\ing1_smestre1_info.dir\C_\Users\FlowUp\Documents\GitHub\ing1_quoridor_2024_15_1\jeux.c.obj.d -o CMakeFiles\ing1_smestre1_info.dir\C_\Users\FlowUp\Documents\GitHub\ing1_quoridor_2024_15_1\jeux.c.obj -c C:\Users\FlowUp\Documents\GitHub\ing1_quoridor_2024_15_1\jeux.c
+CMakeFiles/ing1_smestre1_info.dir/jeux.c.obj: CMakeFiles/ing1_smestre1_info.dir/flags.make
+CMakeFiles/ing1_smestre1_info.dir/jeux.c.obj: C:/Users/FlowUp/Documents/GitHub/ing1_quoridor_2024_15_1/ing1_smestre1_info/jeux.c
+CMakeFiles/ing1_smestre1_info.dir/jeux.c.obj: CMakeFiles/ing1_smestre1_info.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\FlowUp\Documents\GitHub\ing1_quoridor_2024_15_1\ing1_smestre1_info\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building C object CMakeFiles/ing1_smestre1_info.dir/jeux.c.obj"
+	C:\PROGRA~1\JETBRA~1\CLION2~1.2\bin\mingw\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/ing1_smestre1_info.dir/jeux.c.obj -MF CMakeFiles\ing1_smestre1_info.dir\jeux.c.obj.d -o CMakeFiles\ing1_smestre1_info.dir\jeux.c.obj -c C:\Users\FlowUp\Documents\GitHub\ing1_quoridor_2024_15_1\ing1_smestre1_info\jeux.c
 
-CMakeFiles/ing1_smestre1_info.dir/C_/Users/FlowUp/Documents/GitHub/ing1_quoridor_2024_15_1/jeux.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/ing1_smestre1_info.dir/C_/Users/FlowUp/Documents/GitHub/ing1_quoridor_2024_15_1/jeux.c.i"
-	C:\PROGRA~1\JETBRA~1\CLION2~1.2\bin\mingw\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E C:\Users\FlowUp\Documents\GitHub\ing1_quoridor_2024_15_1\jeux.c > CMakeFiles\ing1_smestre1_info.dir\C_\Users\FlowUp\Documents\GitHub\ing1_quoridor_2024_15_1\jeux.c.i
+CMakeFiles/ing1_smestre1_info.dir/jeux.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/ing1_smestre1_info.dir/jeux.c.i"
+	C:\PROGRA~1\JETBRA~1\CLION2~1.2\bin\mingw\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E C:\Users\FlowUp\Documents\GitHub\ing1_quoridor_2024_15_1\ing1_smestre1_info\jeux.c > CMakeFiles\ing1_smestre1_info.dir\jeux.c.i
 
-CMakeFiles/ing1_smestre1_info.dir/C_/Users/FlowUp/Documents/GitHub/ing1_quoridor_2024_15_1/jeux.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/ing1_smestre1_info.dir/C_/Users/FlowUp/Documents/GitHub/ing1_quoridor_2024_15_1/jeux.c.s"
-	C:\PROGRA~1\JETBRA~1\CLION2~1.2\bin\mingw\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S C:\Users\FlowUp\Documents\GitHub\ing1_quoridor_2024_15_1\jeux.c -o CMakeFiles\ing1_smestre1_info.dir\C_\Users\FlowUp\Documents\GitHub\ing1_quoridor_2024_15_1\jeux.c.s
+CMakeFiles/ing1_smestre1_info.dir/jeux.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/ing1_smestre1_info.dir/jeux.c.s"
+	C:\PROGRA~1\JETBRA~1\CLION2~1.2\bin\mingw\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S C:\Users\FlowUp\Documents\GitHub\ing1_quoridor_2024_15_1\ing1_smestre1_info\jeux.c -o CMakeFiles\ing1_smestre1_info.dir\jeux.c.s
 
-CMakeFiles/ing1_smestre1_info.dir/C_/Users/FlowUp/Documents/GitHub/ing1_quoridor_2024_15_1/plateau.c.obj: CMakeFiles/ing1_smestre1_info.dir/flags.make
-CMakeFiles/ing1_smestre1_info.dir/C_/Users/FlowUp/Documents/GitHub/ing1_quoridor_2024_15_1/plateau.c.obj: C:/Users/FlowUp/Documents/GitHub/ing1_quoridor_2024_15_1/plateau.c
-CMakeFiles/ing1_smestre1_info.dir/C_/Users/FlowUp/Documents/GitHub/ing1_quoridor_2024_15_1/plateau.c.obj: CMakeFiles/ing1_smestre1_info.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\FlowUp\Documents\GitHub\ing1_quoridor_2024_15_1\ing1_smestre1_info\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building C object CMakeFiles/ing1_smestre1_info.dir/C_/Users/FlowUp/Documents/GitHub/ing1_quoridor_2024_15_1/plateau.c.obj"
-	C:\PROGRA~1\JETBRA~1\CLION2~1.2\bin\mingw\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/ing1_smestre1_info.dir/C_/Users/FlowUp/Documents/GitHub/ing1_quoridor_2024_15_1/plateau.c.obj -MF CMakeFiles\ing1_smestre1_info.dir\C_\Users\FlowUp\Documents\GitHub\ing1_quoridor_2024_15_1\plateau.c.obj.d -o CMakeFiles\ing1_smestre1_info.dir\C_\Users\FlowUp\Documents\GitHub\ing1_quoridor_2024_15_1\plateau.c.obj -c C:\Users\FlowUp\Documents\GitHub\ing1_quoridor_2024_15_1\plateau.c
+CMakeFiles/ing1_smestre1_info.dir/plateau.c.obj: CMakeFiles/ing1_smestre1_info.dir/flags.make
+CMakeFiles/ing1_smestre1_info.dir/plateau.c.obj: C:/Users/FlowUp/Documents/GitHub/ing1_quoridor_2024_15_1/ing1_smestre1_info/plateau.c
+CMakeFiles/ing1_smestre1_info.dir/plateau.c.obj: CMakeFiles/ing1_smestre1_info.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\FlowUp\Documents\GitHub\ing1_quoridor_2024_15_1\ing1_smestre1_info\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building C object CMakeFiles/ing1_smestre1_info.dir/plateau.c.obj"
+	C:\PROGRA~1\JETBRA~1\CLION2~1.2\bin\mingw\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/ing1_smestre1_info.dir/plateau.c.obj -MF CMakeFiles\ing1_smestre1_info.dir\plateau.c.obj.d -o CMakeFiles\ing1_smestre1_info.dir\plateau.c.obj -c C:\Users\FlowUp\Documents\GitHub\ing1_quoridor_2024_15_1\ing1_smestre1_info\plateau.c
 
-CMakeFiles/ing1_smestre1_info.dir/C_/Users/FlowUp/Documents/GitHub/ing1_quoridor_2024_15_1/plateau.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/ing1_smestre1_info.dir/C_/Users/FlowUp/Documents/GitHub/ing1_quoridor_2024_15_1/plateau.c.i"
-	C:\PROGRA~1\JETBRA~1\CLION2~1.2\bin\mingw\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E C:\Users\FlowUp\Documents\GitHub\ing1_quoridor_2024_15_1\plateau.c > CMakeFiles\ing1_smestre1_info.dir\C_\Users\FlowUp\Documents\GitHub\ing1_quoridor_2024_15_1\plateau.c.i
+CMakeFiles/ing1_smestre1_info.dir/plateau.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/ing1_smestre1_info.dir/plateau.c.i"
+	C:\PROGRA~1\JETBRA~1\CLION2~1.2\bin\mingw\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E C:\Users\FlowUp\Documents\GitHub\ing1_quoridor_2024_15_1\ing1_smestre1_info\plateau.c > CMakeFiles\ing1_smestre1_info.dir\plateau.c.i
 
-CMakeFiles/ing1_smestre1_info.dir/C_/Users/FlowUp/Documents/GitHub/ing1_quoridor_2024_15_1/plateau.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/ing1_smestre1_info.dir/C_/Users/FlowUp/Documents/GitHub/ing1_quoridor_2024_15_1/plateau.c.s"
-	C:\PROGRA~1\JETBRA~1\CLION2~1.2\bin\mingw\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S C:\Users\FlowUp\Documents\GitHub\ing1_quoridor_2024_15_1\plateau.c -o CMakeFiles\ing1_smestre1_info.dir\C_\Users\FlowUp\Documents\GitHub\ing1_quoridor_2024_15_1\plateau.c.s
+CMakeFiles/ing1_smestre1_info.dir/plateau.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/ing1_smestre1_info.dir/plateau.c.s"
+	C:\PROGRA~1\JETBRA~1\CLION2~1.2\bin\mingw\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S C:\Users\FlowUp\Documents\GitHub\ing1_quoridor_2024_15_1\ing1_smestre1_info\plateau.c -o CMakeFiles\ing1_smestre1_info.dir\plateau.c.s
 
 # Object files for target ing1_smestre1_info
 ing1_smestre1_info_OBJECTS = \
 "CMakeFiles/ing1_smestre1_info.dir/main.c.obj" \
-"CMakeFiles/ing1_smestre1_info.dir/C_/Users/FlowUp/Documents/GitHub/ing1_quoridor_2024_15_1/menu.c.obj" \
-"CMakeFiles/ing1_smestre1_info.dir/C_/Users/FlowUp/Documents/GitHub/ing1_quoridor_2024_15_1/joueur.c.obj" \
-"CMakeFiles/ing1_smestre1_info.dir/C_/Users/FlowUp/Documents/GitHub/ing1_quoridor_2024_15_1/jeux.c.obj" \
-"CMakeFiles/ing1_smestre1_info.dir/C_/Users/FlowUp/Documents/GitHub/ing1_quoridor_2024_15_1/plateau.c.obj"
+"CMakeFiles/ing1_smestre1_info.dir/menu.c.obj" \
+"CMakeFiles/ing1_smestre1_info.dir/joueur.c.obj" \
+"CMakeFiles/ing1_smestre1_info.dir/jeux.c.obj" \
+"CMakeFiles/ing1_smestre1_info.dir/plateau.c.obj"
 
 # External object files for target ing1_smestre1_info
 ing1_smestre1_info_EXTERNAL_OBJECTS =
 
 ing1_smestre1_info.exe: CMakeFiles/ing1_smestre1_info.dir/main.c.obj
-ing1_smestre1_info.exe: CMakeFiles/ing1_smestre1_info.dir/C_/Users/FlowUp/Documents/GitHub/ing1_quoridor_2024_15_1/menu.c.obj
-ing1_smestre1_info.exe: CMakeFiles/ing1_smestre1_info.dir/C_/Users/FlowUp/Documents/GitHub/ing1_quoridor_2024_15_1/joueur.c.obj
-ing1_smestre1_info.exe: CMakeFiles/ing1_smestre1_info.dir/C_/Users/FlowUp/Documents/GitHub/ing1_quoridor_2024_15_1/jeux.c.obj
-ing1_smestre1_info.exe: CMakeFiles/ing1_smestre1_info.dir/C_/Users/FlowUp/Documents/GitHub/ing1_quoridor_2024_15_1/plateau.c.obj
+ing1_smestre1_info.exe: CMakeFiles/ing1_smestre1_info.dir/menu.c.obj
+ing1_smestre1_info.exe: CMakeFiles/ing1_smestre1_info.dir/joueur.c.obj
+ing1_smestre1_info.exe: CMakeFiles/ing1_smestre1_info.dir/jeux.c.obj
+ing1_smestre1_info.exe: CMakeFiles/ing1_smestre1_info.dir/plateau.c.obj
 ing1_smestre1_info.exe: CMakeFiles/ing1_smestre1_info.dir/build.make
 ing1_smestre1_info.exe: CMakeFiles/ing1_smestre1_info.dir/linkLibs.rsp
 ing1_smestre1_info.exe: CMakeFiles/ing1_smestre1_info.dir/objects1.rsp

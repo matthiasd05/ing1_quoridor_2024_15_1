@@ -121,46 +121,46 @@
 		},
 		{
 			"backtrace" : 1,
-			"path" : "C:/Users/FlowUp/Documents/GitHub/ing1_quoridor_2024_15_1/menu.h",
+			"path" : "menu.h",
 			"sourceGroupIndex" : 1
 		},
 		{
 			"backtrace" : 1,
 			"compileGroupIndex" : 0,
-			"path" : "C:/Users/FlowUp/Documents/GitHub/ing1_quoridor_2024_15_1/menu.c",
+			"path" : "menu.c",
 			"sourceGroupIndex" : 0
 		},
 		{
 			"backtrace" : 1,
-			"path" : "C:/Users/FlowUp/Documents/GitHub/ing1_quoridor_2024_15_1/joueur.h",
+			"path" : "joueur.h",
 			"sourceGroupIndex" : 1
 		},
 		{
 			"backtrace" : 1,
 			"compileGroupIndex" : 0,
-			"path" : "C:/Users/FlowUp/Documents/GitHub/ing1_quoridor_2024_15_1/joueur.c",
+			"path" : "joueur.c",
 			"sourceGroupIndex" : 0
 		},
 		{
 			"backtrace" : 1,
-			"path" : "C:/Users/FlowUp/Documents/GitHub/ing1_quoridor_2024_15_1/jeux.h",
+			"path" : "jeux.h",
 			"sourceGroupIndex" : 1
 		},
 		{
 			"backtrace" : 1,
 			"compileGroupIndex" : 0,
-			"path" : "C:/Users/FlowUp/Documents/GitHub/ing1_quoridor_2024_15_1/jeux.c",
+			"path" : "jeux.c",
 			"sourceGroupIndex" : 0
 		},
 		{
 			"backtrace" : 1,
 			"compileGroupIndex" : 0,
-			"path" : "C:/Users/FlowUp/Documents/GitHub/ing1_quoridor_2024_15_1/plateau.c",
+			"path" : "plateau.c",
 			"sourceGroupIndex" : 0
 		},
 		{
 			"backtrace" : 1,
-			"path" : "C:/Users/FlowUp/Documents/GitHub/ing1_quoridor_2024_15_1/plateau.h",
+			"path" : "plateau.h",
 			"sourceGroupIndex" : 1
 		}
 	],
