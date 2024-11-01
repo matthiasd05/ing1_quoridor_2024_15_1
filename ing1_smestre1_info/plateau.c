@@ -17,43 +17,42 @@ void initialisationplateau(CasePlateau plateau[TAILLE_PLATEAU][TAILLE_PLATEAU]) 
         }
     }
 }
+
 void afficherplateau(CasePlateau plateau[TAILLE_PLATEAU][TAILLE_PLATEAU], Joueur joueurs[], int nombredejoueurs) {
     // Afficher la numérotation des colonnes
     printf(" ");
-    int tab[TAILLE_PLATEAU]={0};
-    for (int j = 0; j < TAILLE_PLATEAU; j++){
-        tab[j]=j;
-        printf("     %d", tab[j]);
+    for (int j = 0; j < TAILLE_PLATEAU; j++) {
+        printf("   %d", j);
     }
-
+    printf("\n");
 
     for (int lig = 0; lig < TAILLE_PLATEAU; lig++) {
         // Affichage des barrières horizontales supérieures
         printf(" ");
         for (int col = 0; col < TAILLE_PLATEAU; col++) {
             if (plateau[lig][col].barrierehaut) {
-                printf("_____");
+                printf(" ---");
             } else {
-                printf(" ");
+                printf("    ");
             }
         }
         printf("\n");
-        printf("\n");
+
         // Affichage du numéro de ligne
         printf("%2d", lig);
 
-        // Affichage des barrières verticales et des cases
+        // Affichage des cases avec barrières verticales
         for (int col = 0; col < TAILLE_PLATEAU; col++) {
             // Barrière gauche
             if (plateau[lig][col].barrieregauche) {
                 printf("|");
             } else {
-                printf("");
+                printf(" ");
             }
 
             // Affichage de la case avec gestion des couleurs
             Color(plateau[lig][col].couleurtexte, plateau[lig][col].couleurfond);
-            printf("    %c", plateau[lig][col].symbole);
+            printf(" %c", plateau[lig][col].symbole);
             Color(15, 0); // Réinitialiser les couleurs
 
             // Barrière droite
@@ -63,23 +62,23 @@ void afficherplateau(CasePlateau plateau[TAILLE_PLATEAU][TAILLE_PLATEAU], Joueur
                 printf(" ");
             }
         }
+        printf("\n");
 
         // Affichage des barrières horizontales inférieures
         printf(" ");
         for (int col = 0; col < TAILLE_PLATEAU; col++) {
             if (plateau[lig][col].barrierebas) {
-                printf("----");
+                printf(" ---");
             } else {
-                printf(" ");
+                printf("    ");
             }
         }
-
+        printf("\n");
     }
 
     // Affichage des informations des joueurs
     printf("\n");
-    printf("\n");
-    for (int i = 0; i < nombredejoueurs; i++){
+    for (int i = 0; i < nombredejoueurs; i++) {
         printf("Joueur %d: %s (Pion: %c, Barrières restantes: %d)\n",
                joueurs[i].numJoueur, joueurs[i].nom, joueurs[i].pion, joueurs[i].nbBarriere);
     }
