@@ -17,10 +17,14 @@ typedef struct {
 } Joueur;
 
 /**
- * @brief Crée les joueurs pour la partie.
+ * @brief Crée et initialise les joueurs pour la partie.
  *
- * @param joueurs Tableau des joueurs.
- * @param nombredejoueur Nombre de joueurs.
+ * Cette fonction demande à chaque joueur de saisir son nom et son symbole de pion,
+ * initialise leur position de départ en fonction du nombre de joueurs,
+ * et attribue le nombre initial de barrières.
+ *
+ * @param joueurs Tableau des joueurs à initialiser.
+ * @param nombredejoueur Nombre total de joueurs dans la partie.
  */
 void creerjoueur(Joueur joueurs[], int nombredejoueur);
 

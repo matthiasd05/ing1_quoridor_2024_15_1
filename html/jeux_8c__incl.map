@@ -1,0 +1,22 @@
+<map id="C:/Users/FlowUp/Documents/GitHub/ing1_quoridor_2024_15_1/ing1_smestre1_info/jeux.c" name="C:/Users/FlowUp/Documents/GitHub/ing1_quoridor_2024_15_1/ing1_smestre1_info/jeux.c">
+<area shape="rect" id="Node000001" title=" " alt="" coords="147,5,359,64"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="5,112,66,139"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="183,67,81,109,79,104,181,62"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="141,261,215,288"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="221,66,171,119,149,152,131,187,129,204,134,220,155,249,150,252,129,222,124,204,126,186,144,149,167,115,217,62"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="392,112,455,139"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="309,62,387,102,385,107,307,67"/>
+<area shape="rect" id="Node000005" href="$joueur_8h.html" title=" " alt="" coords="270,261,337,288"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="274,63,295,111,303,147,307,184,308,246,302,246,302,184,298,148,290,113,269,65"/>
+<area shape="rect" id="Node000006" href="$plateau_8h.html" title=" " alt="" coords="141,187,215,213"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="239,66,215,113,190,173,186,171,210,111,235,63"/>
+<area shape="rect" id="Node000007" href="$jeux_8h.html" title=" " alt="" coords="225,112,281,139"/>
+<area shape="poly" id="edge8_Node000001_Node000007" title=" " alt="" coords="256,64,256,96,250,96,250,64"/>
+<area shape="rect" id="Node000008" href="$outils_8h.html" title=" " alt="" coords="480,112,543,139"/>
+<area shape="poly" id="edge12_Node000001_Node000008" title=" " alt="" coords="338,62,466,106,464,111,336,67"/>
+<area shape="poly" id="edge6_Node000006_Node000003" title=" " alt="" coords="181,214,181,246,176,246,176,214"/>
+<area shape="poly" id="edge7_Node000006_Node000005" title=" " alt="" coords="201,212,270,251,267,256,199,216"/>
+<area shape="poly" id="edge11_Node000007_Node000003" title=" " alt="" coords="253,140,245,174,230,215,203,252,199,248,225,212,240,173,248,138"/>
+<area shape="poly" id="edge10_Node000007_Node000005" title=" " alt="" coords="260,138,297,246,292,248,255,140"/>
+<area shape="poly" id="edge9_Node000007_Node000006" title=" " alt="" coords="242,141,204,178,200,174,238,137"/>
+</map>

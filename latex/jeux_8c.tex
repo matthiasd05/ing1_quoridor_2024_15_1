@@ -1,0 +1,430 @@
+\doxysection{C\+:/\+Users/\+Flow\+Up/\+Documents/\+Git\+Hub/ing1\+\_\+quoridor\+\_\+2024\+\_\+15\+\_\+1/ing1\+\_\+smestre1\+\_\+info/jeux.c File Reference}
+\label{jeux_8c}\index{C:/Users/FlowUp/Documents/GitHub/ing1\_quoridor\_2024\_15\_1/ing1\_smestre1\_info/jeux.c@{C:/Users/FlowUp/Documents/GitHub/ing1\_quoridor\_2024\_15\_1/ing1\_smestre1\_info/jeux.c}}
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$stdbool.\+h$>$}\newline
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \#include "{}joueur.\+h"{}}\newline
+{\ttfamily \#include "{}plateau.\+h"{}}\newline
+{\ttfamily \#include "{}jeux.\+h"{}}\newline
+{\ttfamily \#include "{}outils.\+h"{}}\newline
+Include dependency graph for jeux.\+c\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{jeux_8c__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \textbf{ nouvellepartie} ()
+\begin{DoxyCompactList}\small\item\em Démarre une nouvelle partie de jeu. \end{DoxyCompactList}\item 
+void \textbf{ jouer\+Tour} (\textbf{ Joueur} $\ast$joueur, \textbf{ Case\+Plateau} plateau[\textbf{ TAILLE\+\_\+\+PLATEAU}][\textbf{ TAILLE\+\_\+\+PLATEAU}], \textbf{ Joueur} joueurs[$\,$], int nombredejoueur)
+\begin{DoxyCompactList}\small\item\em Gère le tour d\textquotesingle{}un joueur. \end{DoxyCompactList}\item 
+bool \textbf{ verifier\+Fin\+De\+Partie} (\textbf{ Joueur} $\ast$joueur)
+\begin{DoxyCompactList}\small\item\em Vérifie si un joueur a atteint la condition de victoire. \end{DoxyCompactList}\item 
+void \textbf{ chargerpartie} ()
+\begin{DoxyCompactList}\small\item\em Charge une partie sauvegardée. \end{DoxyCompactList}\item 
+void \textbf{ afficheraide} ()
+\begin{DoxyCompactList}\small\item\em Affiche l\textquotesingle{}aide du jeu. \end{DoxyCompactList}\item 
+void \textbf{ afficherscore} ()
+\begin{DoxyCompactList}\small\item\em Affiche les scores des joueurs. \end{DoxyCompactList}\item 
+void \textbf{ quitterlejeu} ()
+\begin{DoxyCompactList}\small\item\em Quitte le jeu après avoir éventuellement sauvegardé l\textquotesingle{}état. \end{DoxyCompactList}\item 
+void \textbf{ deplacer\+Pion} (\textbf{ Joueur} $\ast$joueur, \textbf{ Case\+Plateau} plateau[\textbf{ TAILLE\+\_\+\+PLATEAU}][\textbf{ TAILLE\+\_\+\+PLATEAU}], \textbf{ Joueur} joueurs[$\,$], int nombredejoueur)
+\begin{DoxyCompactList}\small\item\em Déplace le pion du joueur sur le plateau. \end{DoxyCompactList}\item 
+bool \textbf{ est\+Deplacement\+Valide} (\textbf{ Joueur} $\ast$joueur, int x, int y, \textbf{ Case\+Plateau} plateau[\textbf{ TAILLE\+\_\+\+PLATEAU}][\textbf{ TAILLE\+\_\+\+PLATEAU}], \textbf{ Joueur} joueurs[$\,$], int nombredejoueur)
+\begin{DoxyCompactList}\small\item\em Vérifie si le déplacement du pion est valide. \end{DoxyCompactList}\item 
+void \textbf{ placer\+Barriere} (\textbf{ Joueur} $\ast$joueur, \textbf{ Case\+Plateau} plateau[\textbf{ TAILLE\+\_\+\+PLATEAU}][\textbf{ TAILLE\+\_\+\+PLATEAU}])
+\begin{DoxyCompactList}\small\item\em Permet au joueur de placer une barrière sur le plateau. \end{DoxyCompactList}\item 
+bool \textbf{ est\+Placement\+Barriere\+Valide} (int x, int y, char orientation, \textbf{ Case\+Plateau} plateau[\textbf{ TAILLE\+\_\+\+PLATEAU}][\textbf{ TAILLE\+\_\+\+PLATEAU}])
+\begin{DoxyCompactList}\small\item\em Vérifie si le placement d\textquotesingle{}une barrière est valide. \end{DoxyCompactList}\item 
+void \textbf{ annuler\+Dernier\+Coup} (\textbf{ Joueur} $\ast$joueur, \textbf{ Case\+Plateau} plateau[\textbf{ TAILLE\+\_\+\+PLATEAU}][\textbf{ TAILLE\+\_\+\+PLATEAU}])
+\begin{DoxyCompactList}\small\item\em Annule le dernier coup joué par le joueur. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\index{jeux.c@{jeux.c}!afficheraide@{afficheraide}}
+\index{afficheraide@{afficheraide}!jeux.c@{jeux.c}}
+\doxysubsubsection{afficheraide()}
+{\footnotesize\ttfamily \label{jeux_8c_a339a343abaa1b831c223af0ada4a0e6c} 
+void afficheraide (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Affiche l\textquotesingle{}aide du jeu. 
+
+Fournit des informations sur les règles et le fonctionnement du jeu. 
+
+Definition at line \textbf{ 143} of file \textbf{ jeux.\+c}.
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{jeux_8c_a339a343abaa1b831c223af0ada4a0e6c_icgraph}
+\end{center}
+\end{figure}
+\index{jeux.c@{jeux.c}!afficherscore@{afficherscore}}
+\index{afficherscore@{afficherscore}!jeux.c@{jeux.c}}
+\doxysubsubsection{afficherscore()}
+{\footnotesize\ttfamily \label{jeux_8c_ad3af3977e231ab437adce20757ac6b37} 
+void afficherscore (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Affiche les scores des joueurs. 
+
+Présente le classement des joueurs en fonction de leurs scores. 
+
+Definition at line \textbf{ 156} of file \textbf{ jeux.\+c}.
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{jeux_8c_ad3af3977e231ab437adce20757ac6b37_icgraph}
+\end{center}
+\end{figure}
+\index{jeux.c@{jeux.c}!annulerDernierCoup@{annulerDernierCoup}}
+\index{annulerDernierCoup@{annulerDernierCoup}!jeux.c@{jeux.c}}
+\doxysubsubsection{annulerDernierCoup()}
+{\footnotesize\ttfamily \label{jeux_8c_a665a4b994ac57ff47281891ac7f52cc7} 
+void annuler\+Dernier\+Coup (\begin{DoxyParamCaption}\item[{\textbf{ Joueur} $\ast$}]{joueur}{, }\item[{\textbf{ Case\+Plateau}}]{plateau}{[\+TAILLE\+\_\+\+PLATEAU][\+TAILLE\+\_\+\+PLATEAU]}\end{DoxyParamCaption})}
+
+
+
+Annule le dernier coup joué par le joueur. 
+
+Annule le dernier coup joué.
+
+Permet au joueur de revenir à l\textquotesingle{}état précédent.
+
+
+\begin{DoxyParams}{Parameters}
+{\em joueur} & Pointeur vers le joueur. \\
+\hline
+{\em plateau} & Le plateau de jeu. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \textbf{ 355} of file \textbf{ jeux.\+c}.
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{jeux_8c_a665a4b994ac57ff47281891ac7f52cc7_icgraph}
+\end{center}
+\end{figure}
+\index{jeux.c@{jeux.c}!chargerpartie@{chargerpartie}}
+\index{chargerpartie@{chargerpartie}!jeux.c@{jeux.c}}
+\doxysubsubsection{chargerpartie()}
+{\footnotesize\ttfamily \label{jeux_8c_ab1d241e670db749e2b65af3a102c0236} 
+void chargerpartie (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Charge une partie sauvegardée. 
+
+Cette fonction permet de charger une partie précédemment sauvegardée. 
+
+Definition at line \textbf{ 132} of file \textbf{ jeux.\+c}.
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{jeux_8c_ab1d241e670db749e2b65af3a102c0236_icgraph}
+\end{center}
+\end{figure}
+\index{jeux.c@{jeux.c}!deplacerPion@{deplacerPion}}
+\index{deplacerPion@{deplacerPion}!jeux.c@{jeux.c}}
+\doxysubsubsection{deplacerPion()}
+{\footnotesize\ttfamily \label{jeux_8c_a682b184512e26921b4cb9fc5d32aa59c} 
+void deplacer\+Pion (\begin{DoxyParamCaption}\item[{\textbf{ Joueur} $\ast$}]{joueur}{, }\item[{\textbf{ Case\+Plateau}}]{plateau}{[\+TAILLE\+\_\+\+PLATEAU][\+TAILLE\+\_\+\+PLATEAU], }\item[{\textbf{ Joueur}}]{joueurs}{[$\,$], }\item[{int}]{nombredejoueur}{}\end{DoxyParamCaption})}
+
+
+
+Déplace le pion du joueur sur le plateau. 
+
+Déplace le pion du joueur.
+
+Demande au joueur les coordonnées de la case cible et vérifie si le déplacement est valide.
+
+
+\begin{DoxyParams}{Parameters}
+{\em joueur} & Pointeur vers le joueur qui déplace son pion. \\
+\hline
+{\em plateau} & Le plateau de jeu. \\
+\hline
+{\em joueurs} & Tableau des joueurs. \\
+\hline
+{\em nombredejoueur} & Nombre total de joueurs. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \textbf{ 183} of file \textbf{ jeux.\+c}.
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=302pt]{jeux_8c_a682b184512e26921b4cb9fc5d32aa59c_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{jeux_8c_a682b184512e26921b4cb9fc5d32aa59c_icgraph}
+\end{center}
+\end{figure}
+\index{jeux.c@{jeux.c}!estDeplacementValide@{estDeplacementValide}}
+\index{estDeplacementValide@{estDeplacementValide}!jeux.c@{jeux.c}}
+\doxysubsubsection{estDeplacementValide()}
+{\footnotesize\ttfamily \label{jeux_8c_a7c015da28a94b23a658719e9d600f753} 
+bool est\+Deplacement\+Valide (\begin{DoxyParamCaption}\item[{\textbf{ Joueur} $\ast$}]{joueur}{, }\item[{int}]{x}{, }\item[{int}]{y}{, }\item[{\textbf{ Case\+Plateau}}]{plateau}{[\+TAILLE\+\_\+\+PLATEAU][\+TAILLE\+\_\+\+PLATEAU], }\item[{\textbf{ Joueur}}]{joueurs}{[$\,$], }\item[{int}]{nombredejoueur}{}\end{DoxyParamCaption})}
+
+
+
+Vérifie si le déplacement du pion est valide. 
+
+Vérifie que la case cible est adjacente, qu\textquotesingle{}il n\textquotesingle{}y a pas de barrières bloquantes, et que la case n\textquotesingle{}est pas occupée par un autre pion.
+
+
+\begin{DoxyParams}{Parameters}
+{\em joueur} & Pointeur vers le joueur qui souhaite se déplacer. \\
+\hline
+{\em x} & Coordonnée X de la case cible. \\
+\hline
+{\em y} & Coordonnée Y de la case cible. \\
+\hline
+{\em plateau} & Le plateau de jeu. \\
+\hline
+{\em joueurs} & Tableau des joueurs. \\
+\hline
+{\em nombredejoueur} & Nombre total de joueurs. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true si le déplacement est valide, false sinon. 
+\end{DoxyReturn}
+
+
+Definition at line \textbf{ 219} of file \textbf{ jeux.\+c}.
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{jeux_8c_a7c015da28a94b23a658719e9d600f753_icgraph}
+\end{center}
+\end{figure}
+\index{jeux.c@{jeux.c}!estPlacementBarriereValide@{estPlacementBarriereValide}}
+\index{estPlacementBarriereValide@{estPlacementBarriereValide}!jeux.c@{jeux.c}}
+\doxysubsubsection{estPlacementBarriereValide()}
+{\footnotesize\ttfamily \label{jeux_8c_a2a873bd88438c99dd5fef3fdffa79ec7} 
+bool est\+Placement\+Barriere\+Valide (\begin{DoxyParamCaption}\item[{int}]{x}{, }\item[{int}]{y}{, }\item[{char}]{orientation}{, }\item[{\textbf{ Case\+Plateau}}]{plateau}{[\+TAILLE\+\_\+\+PLATEAU][\+TAILLE\+\_\+\+PLATEAU]}\end{DoxyParamCaption})}
+
+
+
+Vérifie si le placement d\textquotesingle{}une barrière est valide. 
+
+Vérifie si le placement de la barrière est valide.
+
+Vérifie que la barrière ne sort pas du plateau, qu\textquotesingle{}elle ne chevauche pas une autre barrière, et qu\textquotesingle{}elle ne bloque pas complètement le chemin d\textquotesingle{}un joueur.
+
+
+\begin{DoxyParams}{Parameters}
+{\em x} & Coordonnée X de la case de départ. \\
+\hline
+{\em y} & Coordonnée Y de la case de départ. \\
+\hline
+{\em orientation} & Orientation de la barrière (\textquotesingle{}h\textquotesingle{} pour horizontale, \textquotesingle{}v\textquotesingle{} pour verticale). \\
+\hline
+{\em plateau} & Le plateau de jeu. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true si le placement est valide, false sinon. 
+\end{DoxyReturn}
+
+
+Definition at line \textbf{ 311} of file \textbf{ jeux.\+c}.
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{jeux_8c_a2a873bd88438c99dd5fef3fdffa79ec7_icgraph}
+\end{center}
+\end{figure}
+\index{jeux.c@{jeux.c}!jouerTour@{jouerTour}}
+\index{jouerTour@{jouerTour}!jeux.c@{jeux.c}}
+\doxysubsubsection{jouerTour()}
+{\footnotesize\ttfamily \label{jeux_8c_a518f8ca2fdfb65c98288c8bf18c162b2} 
+void jouer\+Tour (\begin{DoxyParamCaption}\item[{\textbf{ Joueur} $\ast$}]{joueur}{, }\item[{\textbf{ Case\+Plateau}}]{plateau}{[\+TAILLE\+\_\+\+PLATEAU][\+TAILLE\+\_\+\+PLATEAU], }\item[{\textbf{ Joueur}}]{joueurs}{[$\,$], }\item[{int}]{nombredejoueur}{}\end{DoxyParamCaption})}
+
+
+
+Gère le tour d\textquotesingle{}un joueur. 
+
+Propose au joueur les différentes actions possibles lors de son tour et exécute l\textquotesingle{}action choisie.
+
+
+\begin{DoxyParams}{Parameters}
+{\em joueur} & Pointeur vers le joueur dont c\textquotesingle{}est le tour. \\
+\hline
+{\em plateau} & Le plateau de jeu. \\
+\hline
+{\em joueurs} & Tableau des joueurs. \\
+\hline
+{\em nombredejoueur} & Nombre total de joueurs. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \textbf{ 67} of file \textbf{ jeux.\+c}.
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{jeux_8c_a518f8ca2fdfb65c98288c8bf18c162b2_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{jeux_8c_a518f8ca2fdfb65c98288c8bf18c162b2_icgraph}
+\end{center}
+\end{figure}
+\index{jeux.c@{jeux.c}!nouvellepartie@{nouvellepartie}}
+\index{nouvellepartie@{nouvellepartie}!jeux.c@{jeux.c}}
+\doxysubsubsection{nouvellepartie()}
+{\footnotesize\ttfamily \label{jeux_8c_a0b3156fa0567127e6d8173d766d20e5a} 
+void nouvellepartie (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Démarre une nouvelle partie de jeu. 
+
+Lance une nouvelle partie du jeu.
+
+Initialise les joueurs, le plateau, et lance la boucle principale du jeu jusqu\textquotesingle{}à ce qu\textquotesingle{}un joueur remporte la partie. 
+
+Definition at line \textbf{ 15} of file \textbf{ jeux.\+c}.
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{jeux_8c_a0b3156fa0567127e6d8173d766d20e5a_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{jeux_8c_a0b3156fa0567127e6d8173d766d20e5a_icgraph}
+\end{center}
+\end{figure}
+\index{jeux.c@{jeux.c}!placerBarriere@{placerBarriere}}
+\index{placerBarriere@{placerBarriere}!jeux.c@{jeux.c}}
+\doxysubsubsection{placerBarriere()}
+{\footnotesize\ttfamily \label{jeux_8c_ac34a0466b113fa1159885301985fee2d} 
+void placer\+Barriere (\begin{DoxyParamCaption}\item[{\textbf{ Joueur} $\ast$}]{joueur}{, }\item[{\textbf{ Case\+Plateau}}]{plateau}{[\+TAILLE\+\_\+\+PLATEAU][\+TAILLE\+\_\+\+PLATEAU]}\end{DoxyParamCaption})}
+
+
+
+Permet au joueur de placer une barrière sur le plateau. 
+
+Permet au joueur de placer une barrière.
+
+Demande au joueur les coordonnées et l\textquotesingle{}orientation de la barrière, vérifie si le placement est valide, puis met à jour le plateau.
+
+
+\begin{DoxyParams}{Parameters}
+{\em joueur} & Pointeur vers le joueur qui place la barrière. \\
+\hline
+{\em plateau} & Le plateau de jeu. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \textbf{ 266} of file \textbf{ jeux.\+c}.
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=328pt]{jeux_8c_ac34a0466b113fa1159885301985fee2d_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{jeux_8c_ac34a0466b113fa1159885301985fee2d_icgraph}
+\end{center}
+\end{figure}
+\index{jeux.c@{jeux.c}!quitterlejeu@{quitterlejeu}}
+\index{quitterlejeu@{quitterlejeu}!jeux.c@{jeux.c}}
+\doxysubsubsection{quitterlejeu()}
+{\footnotesize\ttfamily \label{jeux_8c_a217f79a6dbc6f05d2deb1edc3a0b12bf} 
+void quitterlejeu (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Quitte le jeu après avoir éventuellement sauvegardé l\textquotesingle{}état. 
+
+Quitte le jeu.
+
+Permet de sauvegarder la partie en cours avant de quitter le jeu. 
+
+Definition at line \textbf{ 167} of file \textbf{ jeux.\+c}.
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{jeux_8c_a217f79a6dbc6f05d2deb1edc3a0b12bf_icgraph}
+\end{center}
+\end{figure}
+\index{jeux.c@{jeux.c}!verifierFinDePartie@{verifierFinDePartie}}
+\index{verifierFinDePartie@{verifierFinDePartie}!jeux.c@{jeux.c}}
+\doxysubsubsection{verifierFinDePartie()}
+{\footnotesize\ttfamily \label{jeux_8c_ad2b4ceea896374c9da6b590261474a6b} 
+bool verifier\+Fin\+De\+Partie (\begin{DoxyParamCaption}\item[{\textbf{ Joueur} $\ast$}]{joueur}{}\end{DoxyParamCaption})}
+
+
+
+Vérifie si un joueur a atteint la condition de victoire. 
+
+Vérifie si la partie est terminée.
+
+La condition de victoire est d\textquotesingle{}atteindre le côté opposé du plateau en fonction du numéro du joueur.
+
+
+\begin{DoxyParams}{Parameters}
+{\em joueur} & Pointeur vers le joueur à vérifier. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true si le joueur a gagné, false sinon. 
+\end{DoxyReturn}
+
+
+Definition at line \textbf{ 105} of file \textbf{ jeux.\+c}.
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{jeux_8c_ad2b4ceea896374c9da6b590261474a6b_icgraph}
+\end{center}
+\end{figure}

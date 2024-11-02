@@ -1,0 +1,15 @@
+<map id="estDeplacementValide" name="estDeplacementValide">
+<area shape="rect" id="Node000001" title="Vérifie si le déplacement du pion est valide." alt="" coords="710,29,861,56"/>
+<area shape="rect" id="Node000002" href="$jeux_8c.html#a682b184512e26921b4cb9fc5d32aa59c" title="Déplace le pion du joueur sur le plateau." alt="" coords="566,29,662,56"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="694,45,662,45,662,40,694,40"/>
+<area shape="poly" id="edge2_Node000002_Node000002" title=" " alt="" coords="636,16,628,10,614,8,600,10,593,14,592,20,595,28,590,30,586,21,589,11,599,5,614,3,630,5,639,12"/>
+<area shape="rect" id="Node000003" href="$jeux_8c.html#a518f8ca2fdfb65c98288c8bf18c162b2" title="Gère le tour d&#39;un joueur." alt="" coords="443,29,518,56"/>
+<area shape="poly" id="edge3_Node000002_Node000003" title=" " alt="" coords="550,45,518,45,518,40,550,40"/>
+<area shape="poly" id="edge4_Node000003_Node000003" title=" " alt="" coords="502,16,495,10,480,8,467,10,460,14,458,20,462,28,457,30,453,21,456,11,465,5,481,3,497,5,506,12"/>
+<area shape="rect" id="Node000004" href="$jeux_8c.html#a0b3156fa0567127e6d8173d766d20e5a" title="Démarre une nouvelle partie de jeu." alt="" coords="294,29,395,56"/>
+<area shape="poly" id="edge5_Node000003_Node000004" title=" " alt="" coords="428,45,396,45,396,40,428,40"/>
+<area shape="rect" id="Node000005" href="$menu_8c.html#aaddeb325b9cc7b9cf3fbca6d3bbc7f26" title="Affiche le menu principal et gère la navigation." alt="" coords="103,29,246,56"/>
+<area shape="poly" id="edge6_Node000004_Node000005" title=" " alt="" coords="278,45,246,45,246,40,278,40"/>
+<area shape="rect" id="Node000006" href="$main_8c.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="Point d&#39;entrée principal du programme." alt="" coords="5,29,55,56"/>
+<area shape="poly" id="edge7_Node000005_Node000006" title=" " alt="" coords="87,45,55,45,55,40,87,40"/>
+</map>

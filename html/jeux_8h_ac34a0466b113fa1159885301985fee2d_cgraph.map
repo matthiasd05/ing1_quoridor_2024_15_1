@@ -1,0 +1,6 @@
+<map id="placerBarriere" name="placerBarriere">
+<area shape="rect" id="Node000001" title="Permet au joueur de placer une barrière." alt="" coords="5,29,107,56"/>
+<area shape="poly" id="edge2_Node000001_Node000001" title=" " alt="" coords="24,30,18,21,22,11,35,5,56,3,79,5,91,12,88,16,77,10,56,8,36,10,26,15,23,20,28,27"/>
+<area shape="rect" id="Node000002" href="$jeux_8c.html#a2a873bd88438c99dd5fef3fdffa79ec7" title="Vérifie si le placement d&#39;une barrière est valide." alt="" coords="155,29,336,56"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="107,40,139,40,139,45,107,45"/>
+</map>

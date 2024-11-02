@@ -1,0 +1,81 @@
+\doxysection{C\+:/\+Users/\+Flow\+Up/\+Documents/\+Git\+Hub/ing1\+\_\+quoridor\+\_\+2024\+\_\+15\+\_\+1/ing1\+\_\+smestre1\+\_\+info/joueur.h File Reference}
+\label{joueur_8h}\index{C:/Users/FlowUp/Documents/GitHub/ing1\_quoridor\_2024\_15\_1/ing1\_smestre1\_info/joueur.h@{C:/Users/FlowUp/Documents/GitHub/ing1\_quoridor\_2024\_15\_1/ing1\_smestre1\_info/joueur.h}}
+This graph shows which files directly or indirectly include this file\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{joueur_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \textbf{ Joueur}
+\begin{DoxyCompactList}\small\item\em Structure représentant un joueur. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \textbf{ TAILLE\+\_\+\+NOM}~50
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \textbf{ creerjoueur} (\textbf{ Joueur} joueurs[$\,$], int nombredejoueur)
+\begin{DoxyCompactList}\small\item\em Crée et initialise les joueurs pour la partie. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Macro Definition Documentation}
+\index{joueur.h@{joueur.h}!TAILLE\_NOM@{TAILLE\_NOM}}
+\index{TAILLE\_NOM@{TAILLE\_NOM}!joueur.h@{joueur.h}}
+\doxysubsubsection{TAILLE\_NOM}
+{\footnotesize\ttfamily \label{joueur_8h_a967232a261ff7f17c1010e6fc27270a0} 
+\#define TAILLE\+\_\+\+NOM~50}
+
+
+
+Definition at line \textbf{ 4} of file \textbf{ joueur.\+h}.
+
+
+
+\doxysubsection{Function Documentation}
+\index{joueur.h@{joueur.h}!creerjoueur@{creerjoueur}}
+\index{creerjoueur@{creerjoueur}!joueur.h@{joueur.h}}
+\doxysubsubsection{creerjoueur()}
+{\footnotesize\ttfamily \label{joueur_8h_ac90120e714020fc348914dd028ac88d7} 
+void creerjoueur (\begin{DoxyParamCaption}\item[{\textbf{ Joueur}}]{joueurs}{[$\,$], }\item[{int}]{nombredejoueur}{}\end{DoxyParamCaption})}
+
+
+
+Crée et initialise les joueurs pour la partie. 
+
+Cette fonction demande à chaque joueur de saisir son nom et son symbole de pion, initialise leur position de départ en fonction du nombre de joueurs, et attribue le nombre initial de barrières.
+
+
+\begin{DoxyParams}{Parameters}
+{\em joueurs} & Tableau des joueurs à initialiser. \\
+\hline
+{\em nombredejoueur} & Nombre total de joueurs dans la partie.\\
+\hline
+\end{DoxyParams}
+Crée et initialise les joueurs pour la partie.
+
+Demande les informations nécessaires à chaque joueur, telles que le nom et le symbole du pion, initialise le nombre de barrières en fonction du nombre de joueurs, et positionne chaque pion sur le plateau de jeu.
+
+
+\begin{DoxyParams}{Parameters}
+{\em joueurs} & Tableau des joueurs à initialiser. \\
+\hline
+{\em nombredejoueur} & Nombre total de joueurs dans la partie. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \textbf{ 16} of file \textbf{ joueur.\+c}.
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{joueur_8h_ac90120e714020fc348914dd028ac88d7_icgraph}
+\end{center}
+\end{figure}

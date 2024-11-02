@@ -1,0 +1,50 @@
+\doxysection{joueur.\+c}
+\label{joueur_8c_source}\index{C:/Users/FlowUp/Documents/GitHub/ing1\_quoridor\_2024\_15\_1/ing1\_smestre1\_info/joueur.c@{C:/Users/FlowUp/Documents/GitHub/ing1\_quoridor\_2024\_15\_1/ing1\_smestre1\_info/joueur.c}}
+\textbf{ Go to the documentation of this file.}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#include\ <stdio.h>}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#include\ <string.h>}}
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ "{}joueur.h"{}}}
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ "{}plateau.h"{}}}
+\DoxyCodeLine{00005\ }
+\DoxyCodeLine{00016\ \textcolor{keywordtype}{void}\ creerjoueur(Joueur\ joueurs[],\ \textcolor{keywordtype}{int}\ nombredejoueur)\ \{}
+\DoxyCodeLine{00017\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ nombredejoueur;\ i++)\ \{}
+\DoxyCodeLine{00018\ \ \ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}Entrez\ le\ nom\ du\ joueur\ \%d:\(\backslash\)n"{}},\ i\ +\ 1);}
+\DoxyCodeLine{00019\ \ \ \ \ \ \ \ \ scanf(\textcolor{stringliteral}{"{}\%s"{}},\ joueurs[i].nom);}
+\DoxyCodeLine{00020\ }
+\DoxyCodeLine{00021\ \ \ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}Choisissez\ le\ symbole\ pour\ votre\ pion\ :\(\backslash\)n"{}});}
+\DoxyCodeLine{00022\ \ \ \ \ \ \ \ \ scanf(\textcolor{stringliteral}{"{}\ \%c"{}},\ \&joueurs[i].pion);}
+\DoxyCodeLine{00023\ }
+\DoxyCodeLine{00024\ \ \ \ \ \ \ \ \ joueurs[i].numJoueur\ =\ i\ +\ 1;}
+\DoxyCodeLine{00025\ \ \ \ \ \ \ \ \ joueurs[i].nbBarriere\ =\ (nombredejoueur\ ==\ 2)\ ?\ 10\ :\ 5;}
+\DoxyCodeLine{00026\ \ \ \ \ \ \ \ \ joueurs[i].score\ =\ 0;}
+\DoxyCodeLine{00027\ }
+\DoxyCodeLine{00028\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Initialisation\ des\ positions\ du\ pion\ selon\ le\ joueur}}
+\DoxyCodeLine{00029\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (nombredejoueur\ ==\ 2)\ \{}
+\DoxyCodeLine{00030\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (i\ ==\ 0)\ \{}
+\DoxyCodeLine{00031\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ joueurs[i].positionX\ =\ TAILLE\_PLATEAU\ /\ 2;}
+\DoxyCodeLine{00032\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ joueurs[i].positionY\ =\ 0;}
+\DoxyCodeLine{00033\ \ \ \ \ \ \ \ \ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \{}
+\DoxyCodeLine{00034\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ joueurs[i].positionX\ =\ TAILLE\_PLATEAU\ /\ 2;}
+\DoxyCodeLine{00035\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ joueurs[i].positionY\ =\ TAILLE\_PLATEAU\ -\/\ 1;}
+\DoxyCodeLine{00036\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00037\ \ \ \ \ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (nombredejoueur\ ==\ 4)\ \{}
+\DoxyCodeLine{00038\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Initialiser\ les\ positions\ pour\ 4\ joueurs}}
+\DoxyCodeLine{00039\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (i\ ==\ 0)\ \{}
+\DoxyCodeLine{00040\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ joueurs[i].positionX\ =\ TAILLE\_PLATEAU\ /\ 2;}
+\DoxyCodeLine{00041\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ joueurs[i].positionY\ =\ 0;}
+\DoxyCodeLine{00042\ \ \ \ \ \ \ \ \ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (i\ ==\ 1)\ \{}
+\DoxyCodeLine{00043\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ joueurs[i].positionX\ =\ TAILLE\_PLATEAU\ -\/\ 1;}
+\DoxyCodeLine{00044\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ joueurs[i].positionY\ =\ TAILLE\_PLATEAU\ /\ 2;}
+\DoxyCodeLine{00045\ \ \ \ \ \ \ \ \ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (i\ ==\ 2)\ \{}
+\DoxyCodeLine{00046\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ joueurs[i].positionX\ =\ TAILLE\_PLATEAU\ /\ 2;}
+\DoxyCodeLine{00047\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ joueurs[i].positionY\ =\ TAILLE\_PLATEAU\ -\/\ 1;}
+\DoxyCodeLine{00048\ \ \ \ \ \ \ \ \ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (i\ ==\ 3)\ \{}
+\DoxyCodeLine{00049\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ joueurs[i].positionX\ =\ 0;}
+\DoxyCodeLine{00050\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ joueurs[i].positionY\ =\ TAILLE\_PLATEAU\ /\ 2;}
+\DoxyCodeLine{00051\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00052\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00053\ \ \ \ \ \}}
+\DoxyCodeLine{00054\ \}}
+
+\end{DoxyCode}

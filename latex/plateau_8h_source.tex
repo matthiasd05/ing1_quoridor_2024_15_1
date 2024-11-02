@@ -1,0 +1,35 @@
+\doxysection{plateau.\+h}
+\label{plateau_8h_source}\index{C:/Users/FlowUp/Documents/GitHub/ing1\_quoridor\_2024\_15\_1/ing1\_smestre1\_info/plateau.h@{C:/Users/FlowUp/Documents/GitHub/ing1\_quoridor\_2024\_15\_1/ing1\_smestre1\_info/plateau.h}}
+\textbf{ Go to the documentation of this file.}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ PLATEAU\_H}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ PLATEAU\_H}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <stdbool.h>}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ "{}joueur.h"{}}}
+\DoxyCodeLine{00006\ }
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#define\ TAILLE\_PLATEAU\ 9}}
+\DoxyCodeLine{00008\ }
+\DoxyCodeLine{00012\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{enum}\ \{}
+\DoxyCodeLine{00013\ \ VIDE,\ }
+\DoxyCodeLine{00014\ \ PION\ \ }
+\DoxyCodeLine{00015\ \}\ TypeDeCase;}
+\DoxyCodeLine{00016\ }
+\DoxyCodeLine{00020\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\{}
+\DoxyCodeLine{00021\ \ TypeDeCase\ type;\ \ \ \ \ }
+\DoxyCodeLine{00022\ \ \textcolor{keywordtype}{char}\ symbole;\ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00023\ \ \textcolor{keywordtype}{int}\ couleurtexte;\ \ \ \ }
+\DoxyCodeLine{00024\ \ \textcolor{keywordtype}{int}\ couleurfond;\ \ \ \ \ }
+\DoxyCodeLine{00025\ \ \textcolor{keywordtype}{bool}\ barrierehaut;\ \ \ }
+\DoxyCodeLine{00026\ \ \textcolor{keywordtype}{bool}\ barrierebas;\ \ \ \ }
+\DoxyCodeLine{00027\ \ \textcolor{keywordtype}{bool}\ barrieregauche;\ }
+\DoxyCodeLine{00028\ \ \textcolor{keywordtype}{bool}\ barrieredroite;\ }
+\DoxyCodeLine{00029\ \}\ CasePlateau;}
+\DoxyCodeLine{00030\ }
+\DoxyCodeLine{00036\ \textcolor{keywordtype}{void}\ initialisationplateau(CasePlateau\ plateau[TAILLE\_PLATEAU][TAILLE\_PLATEAU]);}
+\DoxyCodeLine{00037\ }
+\DoxyCodeLine{00048\ \textcolor{keywordtype}{void}\ afficherplateau(CasePlateau\ plateau[TAILLE\_PLATEAU][TAILLE\_PLATEAU],\ Joueur\ joueurs[],\ \textcolor{keywordtype}{int}\ nombredejoueurs);}
+\DoxyCodeLine{00049\ }
+\DoxyCodeLine{00050\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ PLATEAU\_H}}
+
+\end{DoxyCode}

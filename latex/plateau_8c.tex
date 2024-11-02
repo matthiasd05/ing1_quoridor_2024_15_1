@@ -1,0 +1,94 @@
+\doxysection{C\+:/\+Users/\+Flow\+Up/\+Documents/\+Git\+Hub/ing1\+\_\+quoridor\+\_\+2024\+\_\+15\+\_\+1/ing1\+\_\+smestre1\+\_\+info/plateau.c File Reference}
+\label{plateau_8c}\index{C:/Users/FlowUp/Documents/GitHub/ing1\_quoridor\_2024\_15\_1/ing1\_smestre1\_info/plateau.c@{C:/Users/FlowUp/Documents/GitHub/ing1\_quoridor\_2024\_15\_1/ing1\_smestre1\_info/plateau.c}}
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include "{}plateau.\+h"{}}\newline
+{\ttfamily \#include "{}outils.\+h"{}}\newline
+{\ttfamily \#include "{}joueur.\+h"{}}\newline
+Include dependency graph for plateau.\+c\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=303pt]{plateau_8c__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \textbf{ initialisationplateau} (\textbf{ Case\+Plateau} plateau[\textbf{ TAILLE\+\_\+\+PLATEAU}][\textbf{ TAILLE\+\_\+\+PLATEAU}])
+\begin{DoxyCompactList}\small\item\em Initialise le plateau de jeu. \end{DoxyCompactList}\item 
+void \textbf{ afficherplateau} (\textbf{ Case\+Plateau} plateau[\textbf{ TAILLE\+\_\+\+PLATEAU}][\textbf{ TAILLE\+\_\+\+PLATEAU}], \textbf{ Joueur} joueurs[$\,$], int nombredejoueurs)
+\begin{DoxyCompactList}\small\item\em Affiche le plateau de jeu. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\index{plateau.c@{plateau.c}!afficherplateau@{afficherplateau}}
+\index{afficherplateau@{afficherplateau}!plateau.c@{plateau.c}}
+\doxysubsubsection{afficherplateau()}
+{\footnotesize\ttfamily \label{plateau_8c_a7d5b646c5ab50cf754eb0db4e7310bef} 
+void afficherplateau (\begin{DoxyParamCaption}\item[{\textbf{ Case\+Plateau}}]{plateau}{[\+TAILLE\+\_\+\+PLATEAU][\+TAILLE\+\_\+\+PLATEAU], }\item[{\textbf{ Joueur}}]{joueurs}{[$\,$], }\item[{int}]{nombredejoueurs}{}\end{DoxyParamCaption})}
+
+
+
+Affiche le plateau de jeu. 
+
+Affiche le plateau de jeu avec les pions et les barrières.
+
+Affiche le plateau en montrant les pions des joueurs, les barrières placées, ainsi que les numéros de lignes et de colonnes.
+
+
+\begin{DoxyParams}{Parameters}
+{\em plateau} & Le plateau de jeu. \\
+\hline
+{\em joueurs} & Le tableau des joueurs. \\
+\hline
+{\em nombredejoueurs} & Le nombre total de joueurs. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \textbf{ 39} of file \textbf{ plateau.\+c}.
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=234pt]{plateau_8c_a7d5b646c5ab50cf754eb0db4e7310bef_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{plateau_8c_a7d5b646c5ab50cf754eb0db4e7310bef_icgraph}
+\end{center}
+\end{figure}
+\index{plateau.c@{plateau.c}!initialisationplateau@{initialisationplateau}}
+\index{initialisationplateau@{initialisationplateau}!plateau.c@{plateau.c}}
+\doxysubsubsection{initialisationplateau()}
+{\footnotesize\ttfamily \label{plateau_8c_a1ea4038f3d704f354bf8d6ec27ed17e9} 
+void initialisationplateau (\begin{DoxyParamCaption}\item[{\textbf{ Case\+Plateau}}]{plateau}{[\+TAILLE\+\_\+\+PLATEAU][\+TAILLE\+\_\+\+PLATEAU]}\end{DoxyParamCaption})}
+
+
+
+Initialise le plateau de jeu. 
+
+Initialise le plateau de jeu en réinitialisant toutes les cases.
+
+Réinitialise chaque case du plateau en la mettant à VIDE, sans barrières ni pions, et avec les couleurs par défaut.
+
+
+\begin{DoxyParams}{Parameters}
+{\em plateau} & Le plateau de jeu à initialiser. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \textbf{ 14} of file \textbf{ plateau.\+c}.
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{plateau_8c_a1ea4038f3d704f354bf8d6ec27ed17e9_icgraph}
+\end{center}
+\end{figure}

@@ -1,0 +1,11 @@
+<map id="Color" name="Color">
+<area shape="rect" id="Node000001" title="Change la couleur du texte et du fond dans la console." alt="" coords="597,5,649,32"/>
+<area shape="rect" id="Node000002" href="$plateau_8c.html#a7d5b646c5ab50cf754eb0db4e7310bef" title="Affiche le plateau de jeu." alt="" coords="443,5,549,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="581,21,549,21,549,16,581,16"/>
+<area shape="rect" id="Node000003" href="$jeux_8c.html#a0b3156fa0567127e6d8173d766d20e5a" title="Démarre une nouvelle partie de jeu." alt="" coords="294,5,395,32"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="427,21,396,21,396,16,427,16"/>
+<area shape="rect" id="Node000004" href="$menu_8c.html#aaddeb325b9cc7b9cf3fbca6d3bbc7f26" title="Affiche le menu principal et gère la navigation." alt="" coords="103,5,246,32"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="278,21,246,21,246,16,278,16"/>
+<area shape="rect" id="Node000005" href="$main_8c.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="Point d&#39;entrée principal du programme." alt="" coords="5,5,55,32"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="87,21,55,21,55,16,87,16"/>
+</map>

@@ -1,0 +1,16 @@
+<map id="jouerTour" name="jouerTour">
+<area shape="rect" id="Node000001" title="Gère le tour d&#39;un joueur." alt="" coords="5,80,80,107"/>
+<area shape="poly" id="edge5_Node000001_Node000001" title=" " alt="" coords="16,81,11,71,14,62,25,56,43,53,61,56,71,63,68,67,59,61,42,59,27,61,18,65,16,71,21,78"/>
+<area shape="rect" id="Node000002" href="$jeux_8c.html#a665a4b994ac57ff47281891ac7f52cc7" title="Annule le dernier coup joué par le joueur." alt="" coords="128,5,264,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="64,77,126,42,139,36,142,41,129,46,66,82"/>
+<area shape="rect" id="Node000003" href="$jeux_8c.html#a682b184512e26921b4cb9fc5d32aa59c" title="Déplace le pion du joueur sur le plateau." alt="" coords="148,80,244,107"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="80,91,132,91,132,96,80,96"/>
+<area shape="rect" id="Node000005" href="$jeux_8c.html#ac34a0466b113fa1159885301985fee2d" title="Permet au joueur de placer une barrière sur le plateau." alt="" coords="145,155,246,181"/>
+<area shape="poly" id="edge6_Node000001_Node000005" title=" " alt="" coords="73,105,154,145,152,150,71,110"/>
+<area shape="poly" id="edge3_Node000003_Node000003" title=" " alt="" coords="169,81,164,71,168,62,178,56,196,53,214,56,224,63,221,67,213,61,196,59,180,61,172,65,170,71,174,78"/>
+<area shape="rect" id="Node000004" href="$jeux_8c.html#a7c015da28a94b23a658719e9d600f753" title="Vérifie si le déplacement du pion est valide." alt="" coords="327,80,478,107"/>
+<area shape="poly" id="edge4_Node000003_Node000004" title=" " alt="" coords="245,91,312,91,312,96,245,96"/>
+<area shape="poly" id="edge8_Node000005_Node000005" title=" " alt="" coords="169,155,164,146,168,136,178,130,196,128,214,131,224,137,221,142,213,136,196,133,180,135,172,140,170,145,174,153"/>
+<area shape="rect" id="Node000006" href="$jeux_8c.html#a2a873bd88438c99dd5fef3fdffa79ec7" title="Vérifie si le placement d&#39;une barrière est valide." alt="" coords="312,155,493,181"/>
+<area shape="poly" id="edge7_Node000005_Node000006" title=" " alt="" coords="247,165,297,165,297,171,247,171"/>
+</map>

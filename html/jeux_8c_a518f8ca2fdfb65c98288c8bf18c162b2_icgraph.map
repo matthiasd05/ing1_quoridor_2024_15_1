@@ -1,0 +1,10 @@
+<map id="jouerTour" name="jouerTour">
+<area shape="rect" id="Node000001" title="Gère le tour d&#39;un joueur." alt="" coords="443,29,518,56"/>
+<area shape="poly" id="edge1_Node000001_Node000001" title=" " alt="" coords="503,16,495,10,480,8,467,10,460,14,458,20,461,28,456,30,452,21,455,11,465,5,481,3,497,5,506,12"/>
+<area shape="rect" id="Node000002" href="$jeux_8c.html#a0b3156fa0567127e6d8173d766d20e5a" title="Démarre une nouvelle partie de jeu." alt="" coords="294,29,395,56"/>
+<area shape="poly" id="edge2_Node000001_Node000002" title=" " alt="" coords="428,45,396,45,396,40,428,40"/>
+<area shape="rect" id="Node000003" href="$menu_8c.html#aaddeb325b9cc7b9cf3fbca6d3bbc7f26" title="Affiche le menu principal et gère la navigation." alt="" coords="103,29,246,56"/>
+<area shape="poly" id="edge3_Node000002_Node000003" title=" " alt="" coords="278,45,246,45,246,40,278,40"/>
+<area shape="rect" id="Node000004" href="$main_8c.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="Point d&#39;entrée principal du programme." alt="" coords="5,29,55,56"/>
+<area shape="poly" id="edge4_Node000003_Node000004" title=" " alt="" coords="87,45,55,45,55,40,87,40"/>
+</map>

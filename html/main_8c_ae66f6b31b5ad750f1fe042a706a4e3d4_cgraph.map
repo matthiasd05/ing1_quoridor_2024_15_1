@@ -1,0 +1,40 @@
+<map id="main" name="main">
+<area shape="rect" id="Node000001" title="Point d&#39;entrée principal du programme." alt="" coords="5,107,55,133"/>
+<area shape="rect" id="Node000002" href="$menu_8c.html#aaddeb325b9cc7b9cf3fbca6d3bbc7f26" title="Affiche le menu principal et gère la navigation." alt="" coords="103,107,246,133"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="55,117,87,117,87,123,55,123"/>
+<area shape="rect" id="Node000003" href="$jeux_8c.html#a339a343abaa1b831c223af0ada4a0e6c" title="Affiche l&#39;aide du jeu." alt="" coords="301,5,388,32"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="194,104,293,42,301,37,303,42,295,46,197,108"/>
+<area shape="rect" id="Node000004" href="$jeux_8c.html#ad3af3977e231ab437adce20757ac6b37" title="Affiche les scores des joueurs." alt="" coords="297,56,392,83"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="221,103,282,85,284,90,223,109"/>
+<area shape="rect" id="Node000005" href="$jeux_8c.html#ab1d241e670db749e2b65af3a102c0236" title="Charge une partie sauvegardée." alt="" coords="296,107,393,133"/>
+<area shape="poly" id="edge4_Node000002_Node000005" title=" " alt="" coords="246,117,281,117,281,123,246,123"/>
+<area shape="rect" id="Node000006" href="$jeux_8c.html#a0b3156fa0567127e6d8173d766d20e5a" title="Démarre une nouvelle partie de jeu." alt="" coords="294,157,395,184"/>
+<area shape="poly" id="edge5_Node000002_Node000006" title=" " alt="" coords="223,131,284,150,282,155,221,137"/>
+<area shape="rect" id="Node000018" href="$jeux_8c.html#a217f79a6dbc6f05d2deb1edc3a0b12bf" title="Quitte le jeu après avoir éventuellement sauvegardé l&#39;état." alt="" coords="302,208,387,235"/>
+<area shape="poly" id="edge20_Node000002_Node000018" title=" " alt="" coords="197,132,295,194,303,198,301,203,293,198,194,136"/>
+<area shape="rect" id="Node000007" href="$plateau_8c.html#a7d5b646c5ab50cf754eb0db4e7310bef" title="Affiche le plateau de jeu." alt="" coords="456,56,562,83"/>
+<area shape="poly" id="edge6_Node000006_Node000007" title=" " alt="" coords="375,155,394,143,408,130,417,118,427,105,442,93,450,88,452,92,445,97,430,109,421,121,412,134,397,147,378,159"/>
+<area shape="rect" id="Node000009" href="$joueur_8c.html#ac90120e714020fc348914dd028ac88d7" title="Crée les joueurs et initialise leurs informations." alt="" coords="466,107,552,133"/>
+<area shape="poly" id="edge8_Node000006_Node000009" title=" " alt="" coords="390,154,451,135,453,140,391,159"/>
+<area shape="rect" id="Node000010" href="$plateau_8c.html#a1ea4038f3d704f354bf8d6ec27ed17e9" title="Initialise le plateau de jeu." alt="" coords="443,157,575,184"/>
+<area shape="poly" id="edge9_Node000006_Node000010" title=" " alt="" coords="396,168,428,168,428,173,396,173"/>
+<area shape="rect" id="Node000011" href="$jeux_8c.html#a518f8ca2fdfb65c98288c8bf18c162b2" title="Gère le tour d&#39;un joueur." alt="" coords="472,232,546,259"/>
+<area shape="poly" id="edge10_Node000006_Node000011" title=" " alt="" coords="377,182,465,223,463,228,375,187"/>
+<area shape="rect" id="Node000017" href="$jeux_8c.html#ad2b4ceea896374c9da6b590261474a6b" title="Vérifie si un joueur a atteint la condition de victoire." alt="" coords="444,283,574,309"/>
+<area shape="poly" id="edge19_Node000006_Node000017" title=" " alt="" coords="380,182,397,194,413,214,421,233,429,251,445,269,450,273,447,277,442,273,425,254,416,235,409,217,394,198,377,187"/>
+<area shape="rect" id="Node000008" href="$outils_8c.html#a0ef607bbdb4a5e17946b0ef8a6345bbb" title="Change la couleur du texte et du fond dans la console." alt="" coords="665,56,717,83"/>
+<area shape="poly" id="edge7_Node000007_Node000008" title=" " alt="" coords="562,67,649,67,649,72,562,72"/>
+<area shape="poly" id="edge15_Node000011_Node000011" title=" " alt="" coords="481,233,476,223,479,214,491,208,509,205,529,208,539,214,537,219,527,213,509,211,492,213,483,217,481,223,485,230"/>
+<area shape="rect" id="Node000012" href="$jeux_8c.html#a665a4b994ac57ff47281891ac7f52cc7" title="Annule le dernier coup joué par le joueur." alt="" coords="623,157,759,184"/>
+<area shape="poly" id="edge11_Node000011_Node000012" title=" " alt="" coords="540,229,622,194,637,188,638,193,624,198,542,234"/>
+<area shape="rect" id="Node000013" href="$jeux_8c.html#a682b184512e26921b4cb9fc5d32aa59c" title="Déplace le pion du joueur sur le plateau." alt="" coords="643,232,739,259"/>
+<area shape="poly" id="edge12_Node000011_Node000013" title=" " alt="" coords="547,243,627,243,627,248,547,248"/>
+<area shape="rect" id="Node000015" href="$jeux_8c.html#ac34a0466b113fa1159885301985fee2d" title="Permet au joueur de placer une barrière sur le plateau." alt="" coords="640,307,742,333"/>
+<area shape="poly" id="edge16_Node000011_Node000015" title=" " alt="" coords="547,257,576,268,645,298,643,303,574,273,545,262"/>
+<area shape="poly" id="edge13_Node000013_Node000013" title=" " alt="" coords="660,233,654,223,658,214,671,207,691,205,713,208,724,214,722,219,711,213,691,211,672,213,662,217,659,223,664,230"/>
+<area shape="rect" id="Node000014" href="$jeux_8c.html#a7c015da28a94b23a658719e9d600f753" title="Vérifie si le déplacement du pion est valide." alt="" coords="822,232,973,259"/>
+<area shape="poly" id="edge14_Node000013_Node000014" title=" " alt="" coords="740,243,807,243,807,248,740,248"/>
+<area shape="poly" id="edge18_Node000015_Node000015" title=" " alt="" coords="660,308,654,298,658,288,671,282,691,280,713,283,724,289,722,294,711,288,691,285,672,287,662,292,659,297,664,305"/>
+<area shape="rect" id="Node000016" href="$jeux_8c.html#a2a873bd88438c99dd5fef3fdffa79ec7" title="Vérifie si le placement d&#39;une barrière est valide." alt="" coords="807,307,988,333"/>
+<area shape="poly" id="edge17_Node000015_Node000016" title=" " alt="" coords="742,317,792,317,792,323,742,323"/>
+</map>

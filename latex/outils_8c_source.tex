@@ -1,0 +1,25 @@
+\doxysection{outils.\+c}
+\label{outils_8c_source}\index{C:/Users/FlowUp/Documents/GitHub/ing1\_quoridor\_2024\_15\_1/ing1\_smestre1\_info/outils.c@{C:/Users/FlowUp/Documents/GitHub/ing1\_quoridor\_2024\_15\_1/ing1\_smestre1\_info/outils.c}}
+\textbf{ Go to the documentation of this file.}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#include\ "{}outils.h"{}}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#include\ <windows.h>}}
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ <stdio.h>}}
+\DoxyCodeLine{00004\ }
+\DoxyCodeLine{00015\ \textcolor{keywordtype}{void}\ gotoligcol(\textcolor{keywordtype}{int}\ lig,\ \textcolor{keywordtype}{int}\ col)\ \{}
+\DoxyCodeLine{00016\ \ \ \ \ COORD\ mycoord;}
+\DoxyCodeLine{00017\ \ \ \ \ mycoord.X\ =\ col;}
+\DoxyCodeLine{00018\ \ \ \ \ mycoord.Y\ =\ lig;}
+\DoxyCodeLine{00019\ \ \ \ \ SetConsoleCursorPosition(GetStdHandle(STD\_OUTPUT\_HANDLE),\ mycoord);}
+\DoxyCodeLine{00020\ \}}
+\DoxyCodeLine{00021\ }
+\DoxyCodeLine{00032\ \textcolor{keywordtype}{void}\ Color(\textcolor{keywordtype}{int}\ couleurDuTexte,\ \textcolor{keywordtype}{int}\ couleurDeFond)\ \{}
+\DoxyCodeLine{00033\ \ \ \ \ HANDLE\ H\ =\ GetStdHandle(STD\_OUTPUT\_HANDLE);}
+\DoxyCodeLine{00034\ \ \ \ \ SetConsoleTextAttribute(H,\ couleurDeFond\ *\ 16\ +\ couleurDuTexte);}
+\DoxyCodeLine{00035\ \}}
+\DoxyCodeLine{00036\ }
+\DoxyCodeLine{00043\ \textcolor{keywordtype}{void}\ effacerEcran()\ \{}
+\DoxyCodeLine{00044\ \ \ \ \ system(\textcolor{stringliteral}{"{}cls"{}});}
+\DoxyCodeLine{00045\ \}}
+
+\end{DoxyCode}

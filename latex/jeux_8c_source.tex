@@ -1,0 +1,265 @@
+\doxysection{jeux.\+c}
+\label{jeux_8c_source}\index{C:/Users/FlowUp/Documents/GitHub/ing1\_quoridor\_2024\_15\_1/ing1\_smestre1\_info/jeux.c@{C:/Users/FlowUp/Documents/GitHub/ing1\_quoridor\_2024\_15\_1/ing1\_smestre1\_info/jeux.c}}
+\textbf{ Go to the documentation of this file.}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#include\ <stdio.h>}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#include\ <stdbool.h>}}
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ <stdlib.h>}}
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ "{}joueur.h"{}}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ "{}plateau.h"{}}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ "{}jeux.h"{}}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ "{}outils.h"{}}}
+\DoxyCodeLine{00008\ }
+\DoxyCodeLine{00015\ \textcolor{keywordtype}{void}\ nouvellepartie()\ \{}
+\DoxyCodeLine{00016\ \ \ \ \ \textcolor{keywordtype}{int}\ nombredejoueur;}
+\DoxyCodeLine{00017\ \ \ \ \ printf(\textcolor{stringliteral}{"{}Entrez\ le\ nombre\ de\ joueurs\ (2\ ou\ 4):\ \(\backslash\)n"{}});}
+\DoxyCodeLine{00018\ \ \ \ \ scanf(\textcolor{stringliteral}{"{}\%d"{}},\ \&nombredejoueur);}
+\DoxyCodeLine{00019\ }
+\DoxyCodeLine{00020\ \ \ \ \ \textcolor{keywordflow}{if}\ (nombredejoueur\ !=\ 2\ \&\&\ nombredejoueur\ !=\ 4)\ \{}
+\DoxyCodeLine{00021\ \ \ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}Nombre\ de\ joueurs\ invalide.\ Veuillez\ entrer\ 2\ ou\ 4.\(\backslash\)n"{}});}
+\DoxyCodeLine{00022\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{00023\ \ \ \ \ \}}
+\DoxyCodeLine{00024\ }
+\DoxyCodeLine{00025\ \ \ \ \ Joueur\ joueurs[nombredejoueur];}
+\DoxyCodeLine{00026\ \ \ \ \ creerjoueur(joueurs,\ nombredejoueur);}
+\DoxyCodeLine{00027\ }
+\DoxyCodeLine{00028\ \ \ \ \ \textcolor{comment}{//\ Initialisation\ du\ plateau}}
+\DoxyCodeLine{00029\ \ \ \ \ CasePlateau\ plateau[TAILLE\_PLATEAU][TAILLE\_PLATEAU];}
+\DoxyCodeLine{00030\ \ \ \ \ initialisationplateau(plateau);}
+\DoxyCodeLine{00031\ }
+\DoxyCodeLine{00032\ \ \ \ \ \textcolor{comment}{//\ Positionnement\ des\ pions\ des\ joueurs\ sur\ le\ plateau}}
+\DoxyCodeLine{00033\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ nombredejoueur;\ i++)\ \{}
+\DoxyCodeLine{00034\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ x\ =\ joueurs[i].positionX;}
+\DoxyCodeLine{00035\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ y\ =\ joueurs[i].positionY;}
+\DoxyCodeLine{00036\ \ \ \ \ \ \ \ \ plateau[y][x].type\ =\ PION;}
+\DoxyCodeLine{00037\ \ \ \ \ \ \ \ \ plateau[y][x].symbole\ =\ joueurs[i].pion;}
+\DoxyCodeLine{00038\ \ \ \ \ \}}
+\DoxyCodeLine{00039\ }
+\DoxyCodeLine{00040\ \ \ \ \ \textcolor{comment}{//\ Lancer\ la\ boucle\ principale\ du\ jeu}}
+\DoxyCodeLine{00041\ \ \ \ \ \textcolor{keywordtype}{bool}\ finDePartie\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00042\ \ \ \ \ \textcolor{keywordflow}{while}\ (!finDePartie)\ \{}
+\DoxyCodeLine{00043\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ nombredejoueur;\ i++)\ \{}
+\DoxyCodeLine{00044\ \ \ \ \ \ \ \ \ \ \ \ \ afficherplateau(plateau,\ joueurs,\ nombredejoueur);}
+\DoxyCodeLine{00045\ \ \ \ \ \ \ \ \ \ \ \ \ jouerTour(\&joueurs[i],\ plateau,\ joueurs,\ nombredejoueur);}
+\DoxyCodeLine{00046\ \ \ \ \ \ \ \ \ \ \ \ \ finDePartie\ =\ verifierFinDePartie(\&joueurs[i]);}
+\DoxyCodeLine{00047\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (finDePartie)\ \{}
+\DoxyCodeLine{00048\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}Le\ joueur\ \%s\ a\ gagné!\(\backslash\)n"{}},\ joueurs[i].nom);}
+\DoxyCodeLine{00049\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Calcul\ des\ scores\ et\ sauvegarde}}
+\DoxyCodeLine{00050\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00051\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00052\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00053\ \ \ \ \ \}}
+\DoxyCodeLine{00054\ \}}
+\DoxyCodeLine{00055\ }
+\DoxyCodeLine{00067\ \textcolor{keywordtype}{void}\ jouerTour(Joueur\ *joueur,\ CasePlateau\ plateau[TAILLE\_PLATEAU][TAILLE\_PLATEAU],\ Joueur\ joueurs[],\ \textcolor{keywordtype}{int}\ nombredejoueur)\ \{}
+\DoxyCodeLine{00068\ \ \ \ \ \textcolor{keywordtype}{int}\ choix;}
+\DoxyCodeLine{00069\ \ \ \ \ printf(\textcolor{stringliteral}{"{}C'est\ le\ tour\ de\ \%s.\(\backslash\)n"{}},\ joueur-\/>nom);}
+\DoxyCodeLine{00070\ \ \ \ \ printf(\textcolor{stringliteral}{"{}1.\ Déplacer\ le\ pion\(\backslash\)n"{}});}
+\DoxyCodeLine{00071\ \ \ \ \ printf(\textcolor{stringliteral}{"{}2.\ Placer\ une\ barrière\(\backslash\)n"{}});}
+\DoxyCodeLine{00072\ \ \ \ \ printf(\textcolor{stringliteral}{"{}3.\ Passer\ le\ tour\(\backslash\)n"{}});}
+\DoxyCodeLine{00073\ \ \ \ \ printf(\textcolor{stringliteral}{"{}4.\ Annuler\ le\ dernier\ coup\(\backslash\)n"{}});}
+\DoxyCodeLine{00074\ \ \ \ \ printf(\textcolor{stringliteral}{"{}Votre\ choix:\ "{}});}
+\DoxyCodeLine{00075\ \ \ \ \ scanf(\textcolor{stringliteral}{"{}\%d"{}},\ \&choix);}
+\DoxyCodeLine{00076\ }
+\DoxyCodeLine{00077\ \ \ \ \ \textcolor{keywordflow}{switch}\ (choix)\ \{}
+\DoxyCodeLine{00078\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ 1:}
+\DoxyCodeLine{00079\ \ \ \ \ \ \ \ \ \ \ \ \ deplacerPion(joueur,\ plateau,\ joueurs,\ nombredejoueur);}
+\DoxyCodeLine{00080\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00081\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ 2:}
+\DoxyCodeLine{00082\ \ \ \ \ \ \ \ \ \ \ \ \ placerBarriere(joueur,\ plateau);}
+\DoxyCodeLine{00083\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00084\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ 3:}
+\DoxyCodeLine{00085\ \ \ \ \ \ \ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}\%s\ passe\ son\ tour.\(\backslash\)n"{}},\ joueur-\/>nom);}
+\DoxyCodeLine{00086\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00087\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ 4:}
+\DoxyCodeLine{00088\ \ \ \ \ \ \ \ \ \ \ \ \ annulerDernierCoup(joueur,\ plateau);}
+\DoxyCodeLine{00089\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00090\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{default}:}
+\DoxyCodeLine{00091\ \ \ \ \ \ \ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}Choix\ invalide.\ Veuillez\ réessayer.\(\backslash\)n"{}});}
+\DoxyCodeLine{00092\ \ \ \ \ \ \ \ \ \ \ \ \ jouerTour(joueur,\ plateau,\ joueurs,\ nombredejoueur);}
+\DoxyCodeLine{00093\ \ \ \ \ \}}
+\DoxyCodeLine{00094\ \}}
+\DoxyCodeLine{00095\ }
+\DoxyCodeLine{00105\ \textcolor{keywordtype}{bool}\ verifierFinDePartie(Joueur\ *joueur)\ \{}
+\DoxyCodeLine{00106\ \ \ \ \ \textcolor{comment}{//\ Vérifier\ si\ le\ joueur\ a\ atteint\ le\ bord\ opposé}}
+\DoxyCodeLine{00107\ \ \ \ \ \textcolor{keywordflow}{if}\ (joueur-\/>numJoueur\ ==\ 1)\ \{}
+\DoxyCodeLine{00108\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (joueur-\/>positionY\ ==\ TAILLE\_PLATEAU\ -\/\ 1)\ \{}
+\DoxyCodeLine{00109\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00110\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00111\ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (joueur-\/>numJoueur\ ==\ 2)\ \{}
+\DoxyCodeLine{00112\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (joueur-\/>positionY\ ==\ 0)\ \{}
+\DoxyCodeLine{00113\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00114\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00115\ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (joueur-\/>numJoueur\ ==\ 3)\ \{}
+\DoxyCodeLine{00116\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (joueur-\/>positionX\ ==\ TAILLE\_PLATEAU\ -\/\ 1)\ \{}
+\DoxyCodeLine{00117\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00118\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00119\ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (joueur-\/>numJoueur\ ==\ 4)\ \{}
+\DoxyCodeLine{00120\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (joueur-\/>positionX\ ==\ 0)\ \{}
+\DoxyCodeLine{00121\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00122\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00123\ \ \ \ \ \}}
+\DoxyCodeLine{00124\ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00125\ \}}
+\DoxyCodeLine{00126\ }
+\DoxyCodeLine{00132\ \textcolor{keywordtype}{void}\ chargerpartie()\ \{}
+\DoxyCodeLine{00133\ \ \ \ \ \textcolor{comment}{//\ Implémenter\ la\ fonctionnalité\ de\ chargement\ de\ partie}}
+\DoxyCodeLine{00134\ \ \ \ \ printf(\textcolor{stringliteral}{"{}Chargement\ de\ la\ partie...\(\backslash\)n"{}});}
+\DoxyCodeLine{00135\ \ \ \ \ \textcolor{comment}{//\ Code\ à\ implémenter}}
+\DoxyCodeLine{00136\ \}}
+\DoxyCodeLine{00137\ }
+\DoxyCodeLine{00143\ \textcolor{keywordtype}{void}\ afficheraide()\ \{}
+\DoxyCodeLine{00144\ \ \ \ \ \textcolor{comment}{//\ Afficher\ les\ règles\ du\ jeu\ ou\ l'aide}}
+\DoxyCodeLine{00145\ \ \ \ \ printf(\textcolor{stringliteral}{"{}===\ Aide\ du\ Jeu\ ===\(\backslash\)n"{}});}
+\DoxyCodeLine{00146\ \ \ \ \ printf(\textcolor{stringliteral}{"{}Le\ but\ du\ jeu\ est\ d'atteindre\ le\ côté\ opposé\ du\ plateau\ avant\ vos\ adversaires.\(\backslash\)n"{}});}
+\DoxyCodeLine{00147\ \ \ \ \ printf(\textcolor{stringliteral}{"{}Vous\ pouvez\ déplacer\ votre\ pion\ ou\ placer\ des\ barrières\ pour\ bloquer\ vos\ adversaires.\(\backslash\)n"{}});}
+\DoxyCodeLine{00148\ \ \ \ \ \textcolor{comment}{//\ Ajoutez\ plus\ de\ détails\ selon\ les\ règles}}
+\DoxyCodeLine{00149\ \}}
+\DoxyCodeLine{00150\ }
+\DoxyCodeLine{00156\ \textcolor{keywordtype}{void}\ afficherscore()\ \{}
+\DoxyCodeLine{00157\ \ \ \ \ \textcolor{comment}{//\ Afficher\ les\ scores\ des\ joueurs}}
+\DoxyCodeLine{00158\ \ \ \ \ printf(\textcolor{stringliteral}{"{}Affichage\ des\ scores...\(\backslash\)n"{}});}
+\DoxyCodeLine{00159\ \ \ \ \ \textcolor{comment}{//\ Code\ à\ implémenter}}
+\DoxyCodeLine{00160\ \}}
+\DoxyCodeLine{00161\ }
+\DoxyCodeLine{00167\ \textcolor{keywordtype}{void}\ quitterlejeu()\ \{}
+\DoxyCodeLine{00168\ \ \ \ \ \textcolor{comment}{//\ Sauvegarder\ l'état\ si\ nécessaire\ et\ quitter}}
+\DoxyCodeLine{00169\ \ \ \ \ printf(\textcolor{stringliteral}{"{}Au\ revoir\ !\(\backslash\)n"{}});}
+\DoxyCodeLine{00170\ \ \ \ \ \textcolor{comment}{//\ Code\ à\ implémenter\ si\ nécessaire}}
+\DoxyCodeLine{00171\ \}}
+\DoxyCodeLine{00172\ }
+\DoxyCodeLine{00183\ \textcolor{keywordtype}{void}\ deplacerPion(Joueur\ *joueur,\ CasePlateau\ plateau[TAILLE\_PLATEAU][TAILLE\_PLATEAU],\ Joueur\ joueurs[],\ \textcolor{keywordtype}{int}\ nombredejoueur)\ \{}
+\DoxyCodeLine{00184\ \ \ \ \ \textcolor{keywordtype}{int}\ x,\ y;}
+\DoxyCodeLine{00185\ \ \ \ \ printf(\textcolor{stringliteral}{"{}Entrez\ les\ coordonnées\ X\ et\ Y\ de\ la\ case\ où\ vous\ voulez\ déplacer\ votre\ pion\ :\(\backslash\)n"{}});}
+\DoxyCodeLine{00186\ \ \ \ \ scanf(\textcolor{stringliteral}{"{}\%d\ \%d"{}},\ \&x,\ \&y);}
+\DoxyCodeLine{00187\ }
+\DoxyCodeLine{00188\ \ \ \ \ \textcolor{comment}{//\ Vérifier\ si\ le\ déplacement\ est\ valide}}
+\DoxyCodeLine{00189\ \ \ \ \ \textcolor{keywordflow}{if}\ (estDeplacementValide(joueur,\ x,\ y,\ plateau,\ joueurs,\ nombredejoueur))\ \{}
+\DoxyCodeLine{00190\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Mettre\ à\ jour\ le\ plateau}}
+\DoxyCodeLine{00191\ \ \ \ \ \ \ \ \ plateau[joueur-\/>positionY][joueur-\/>positionX].type\ =\ VIDE;}
+\DoxyCodeLine{00192\ \ \ \ \ \ \ \ \ plateau[joueur-\/>positionY][joueur-\/>positionX].symbole\ =\ \textcolor{charliteral}{'\ '};}
+\DoxyCodeLine{00193\ }
+\DoxyCodeLine{00194\ \ \ \ \ \ \ \ \ joueur-\/>positionX\ =\ x;}
+\DoxyCodeLine{00195\ \ \ \ \ \ \ \ \ joueur-\/>positionY\ =\ y;}
+\DoxyCodeLine{00196\ }
+\DoxyCodeLine{00197\ \ \ \ \ \ \ \ \ plateau[y][x].type\ =\ PION;}
+\DoxyCodeLine{00198\ \ \ \ \ \ \ \ \ plateau[y][x].symbole\ =\ joueur-\/>pion;}
+\DoxyCodeLine{00199\ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \{}
+\DoxyCodeLine{00200\ \ \ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}Déplacement\ invalide.\ Veuillez\ réessayer.\(\backslash\)n"{}});}
+\DoxyCodeLine{00201\ \ \ \ \ \ \ \ \ deplacerPion(joueur,\ plateau,\ joueurs,\ nombredejoueur);}
+\DoxyCodeLine{00202\ \ \ \ \ \}}
+\DoxyCodeLine{00203\ \}}
+\DoxyCodeLine{00204\ }
+\DoxyCodeLine{00219\ \textcolor{keywordtype}{bool}\ estDeplacementValide(Joueur\ *joueur,\ \textcolor{keywordtype}{int}\ x,\ \textcolor{keywordtype}{int}\ y,\ CasePlateau\ plateau[TAILLE\_PLATEAU][TAILLE\_PLATEAU],\ Joueur\ joueurs[],\ \textcolor{keywordtype}{int}\ nombredejoueur)\ \{}
+\DoxyCodeLine{00220\ \ \ \ \ \textcolor{comment}{//\ Vérifier\ que\ les\ coordonnées\ sont\ dans\ le\ plateau}}
+\DoxyCodeLine{00221\ \ \ \ \ \textcolor{keywordflow}{if}\ (x\ <\ 0\ ||\ x\ >=\ TAILLE\_PLATEAU\ ||\ y\ <\ 0\ ||\ y\ >=\ TAILLE\_PLATEAU)\ \{}
+\DoxyCodeLine{00222\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00223\ \ \ \ \ \}}
+\DoxyCodeLine{00224\ }
+\DoxyCodeLine{00225\ \ \ \ \ \textcolor{comment}{//\ Calcul\ de\ la\ différence\ entre\ la\ position\ actuelle\ et\ la\ position\ cible}}
+\DoxyCodeLine{00226\ \ \ \ \ \textcolor{keywordtype}{int}\ dx\ =\ x\ -\/\ joueur-\/>positionX;}
+\DoxyCodeLine{00227\ \ \ \ \ \textcolor{keywordtype}{int}\ dy\ =\ y\ -\/\ joueur-\/>positionY;}
+\DoxyCodeLine{00228\ }
+\DoxyCodeLine{00229\ \ \ \ \ \textcolor{comment}{//\ Vérifier\ que\ le\ déplacement\ est\ d'une\ case\ adjacente}}
+\DoxyCodeLine{00230\ \ \ \ \ \textcolor{keywordflow}{if}\ ((abs(dx)\ ==\ 1\ \&\&\ dy\ ==\ 0)\ ||\ (dx\ ==\ 0\ \&\&\ abs(dy)\ ==\ 1))\ \{}
+\DoxyCodeLine{00231\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Vérifier\ qu'il\ n'y\ a\ pas\ de\ barrière\ entre\ les\ cases}}
+\DoxyCodeLine{00232\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (dx\ ==\ 1)\ \{\ \textcolor{comment}{//\ Déplacement\ vers\ la\ droite}}
+\DoxyCodeLine{00233\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!plateau[joueur-\/>positionY][joueur-\/>positionX].barrieredroite\ \&\&\ !plateau[y][x].barrieregauche)\ \{}
+\DoxyCodeLine{00234\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ plateau[y][x].type\ ==\ VIDE;}
+\DoxyCodeLine{00235\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00236\ \ \ \ \ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (dx\ ==\ -\/1)\ \{\ \textcolor{comment}{//\ Déplacement\ vers\ la\ gauche}}
+\DoxyCodeLine{00237\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!plateau[joueur-\/>positionY][joueur-\/>positionX].barrieregauche\ \&\&\ !plateau[y][x].barrieredroite)\ \{}
+\DoxyCodeLine{00238\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ plateau[y][x].type\ ==\ VIDE;}
+\DoxyCodeLine{00239\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00240\ \ \ \ \ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (dy\ ==\ 1)\ \{\ \textcolor{comment}{//\ Déplacement\ vers\ le\ bas}}
+\DoxyCodeLine{00241\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!plateau[joueur-\/>positionY][joueur-\/>positionX].barrierebas\ \&\&\ !plateau[y][x].barrierehaut)\ \{}
+\DoxyCodeLine{00242\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ plateau[y][x].type\ ==\ VIDE;}
+\DoxyCodeLine{00243\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00244\ \ \ \ \ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (dy\ ==\ -\/1)\ \{\ \textcolor{comment}{//\ Déplacement\ vers\ le\ haut}}
+\DoxyCodeLine{00245\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!plateau[joueur-\/>positionY][joueur-\/>positionX].barrierehaut\ \&\&\ !plateau[y][x].barrierebas)\ \{}
+\DoxyCodeLine{00246\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ plateau[y][x].type\ ==\ VIDE;}
+\DoxyCodeLine{00247\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00248\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00249\ \ \ \ \ \}}
+\DoxyCodeLine{00250\ }
+\DoxyCodeLine{00251\ \ \ \ \ \textcolor{comment}{//\ Vérifier\ le\ cas\ où\ un\ pion\ est\ en\ face\ et\ possibilité\ de\ sauter\ par-\/dessus}}
+\DoxyCodeLine{00252\ \ \ \ \ \textcolor{comment}{//\ À\ implémenter\ si\ nécessaire}}
+\DoxyCodeLine{00253\ }
+\DoxyCodeLine{00254\ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00255\ \}}
+\DoxyCodeLine{00256\ }
+\DoxyCodeLine{00266\ \textcolor{keywordtype}{void}\ placerBarriere(Joueur\ *joueur,\ CasePlateau\ plateau[TAILLE\_PLATEAU][TAILLE\_PLATEAU])\ \{}
+\DoxyCodeLine{00267\ \ \ \ \ \textcolor{keywordflow}{if}\ (joueur-\/>nbBarriere\ <=\ 0)\ \{}
+\DoxyCodeLine{00268\ \ \ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}Vous\ n'avez\ plus\ de\ barrières\ disponibles.\(\backslash\)n"{}});}
+\DoxyCodeLine{00269\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{00270\ \ \ \ \ \}}
+\DoxyCodeLine{00271\ }
+\DoxyCodeLine{00272\ \ \ \ \ \textcolor{keywordtype}{int}\ x,\ y;}
+\DoxyCodeLine{00273\ \ \ \ \ \textcolor{keywordtype}{char}\ orientation;}
+\DoxyCodeLine{00274\ \ \ \ \ printf(\textcolor{stringliteral}{"{}Entrez\ les\ coordonnées\ de\ la\ case\ de\ départ\ pour\ la\ barrière\ (x\ y)\ :\(\backslash\)n"{}});}
+\DoxyCodeLine{00275\ \ \ \ \ scanf(\textcolor{stringliteral}{"{}\%d\ \%d"{}},\ \&x,\ \&y);}
+\DoxyCodeLine{00276\ \ \ \ \ printf(\textcolor{stringliteral}{"{}Entrez\ l'orientation\ de\ la\ barrière\ (h\ pour\ horizontale,\ v\ pour\ verticale)\ :\(\backslash\)n"{}});}
+\DoxyCodeLine{00277\ \ \ \ \ scanf(\textcolor{stringliteral}{"{}\ \%c"{}},\ \&orientation);}
+\DoxyCodeLine{00278\ }
+\DoxyCodeLine{00279\ \ \ \ \ \textcolor{comment}{//\ Vérifier\ que\ le\ placement\ est\ valide}}
+\DoxyCodeLine{00280\ \ \ \ \ \textcolor{keywordflow}{if}\ (estPlacementBarriereValide(x,\ y,\ orientation,\ plateau))\ \{}
+\DoxyCodeLine{00281\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Placer\ la\ barrière}}
+\DoxyCodeLine{00282\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (orientation\ ==\ \textcolor{charliteral}{'h'})\ \{}
+\DoxyCodeLine{00283\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Placer\ une\ barrière\ horizontale}}
+\DoxyCodeLine{00284\ \ \ \ \ \ \ \ \ \ \ \ \ plateau[y][x].barrierebas\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00285\ \ \ \ \ \ \ \ \ \ \ \ \ plateau[y][x\ +\ 1].barrierebas\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00286\ \ \ \ \ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (orientation\ ==\ \textcolor{charliteral}{'v'})\ \{}
+\DoxyCodeLine{00287\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Placer\ une\ barrière\ verticale}}
+\DoxyCodeLine{00288\ \ \ \ \ \ \ \ \ \ \ \ \ plateau[y][x].barrieredroite\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00289\ \ \ \ \ \ \ \ \ \ \ \ \ plateau[y\ +\ 1][x].barrieredroite\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00290\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00291\ \ \ \ \ \ \ \ \ joueur-\/>nbBarriere-\/-\/;}
+\DoxyCodeLine{00292\ \ \ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}Barrière\ placée\ avec\ succès.\(\backslash\)n"{}});}
+\DoxyCodeLine{00293\ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \{}
+\DoxyCodeLine{00294\ \ \ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}Placement\ de\ barrière\ invalide.\ Veuillez\ réessayer.\(\backslash\)n"{}});}
+\DoxyCodeLine{00295\ \ \ \ \ \ \ \ \ placerBarriere(joueur,\ plateau);}
+\DoxyCodeLine{00296\ \ \ \ \ \}}
+\DoxyCodeLine{00297\ \}}
+\DoxyCodeLine{00298\ }
+\DoxyCodeLine{00311\ \textcolor{keywordtype}{bool}\ estPlacementBarriereValide(\textcolor{keywordtype}{int}\ x,\ \textcolor{keywordtype}{int}\ y,\ \textcolor{keywordtype}{char}\ orientation,\ CasePlateau\ plateau[TAILLE\_PLATEAU][TAILLE\_PLATEAU])\ \{}
+\DoxyCodeLine{00312\ \ \ \ \ \textcolor{comment}{//\ Vérifier\ que\ les\ coordonnées\ sont\ dans\ le\ plateau}}
+\DoxyCodeLine{00313\ \ \ \ \ \textcolor{keywordflow}{if}\ (x\ <\ 0\ ||\ y\ <\ 0\ ||\ x\ >=\ TAILLE\_PLATEAU\ ||\ y\ >=\ TAILLE\_PLATEAU)\ \{}
+\DoxyCodeLine{00314\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00315\ \ \ \ \ \}}
+\DoxyCodeLine{00316\ }
+\DoxyCodeLine{00317\ \ \ \ \ \textcolor{keywordflow}{if}\ (orientation\ ==\ \textcolor{charliteral}{'h'})\ \{}
+\DoxyCodeLine{00318\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Vérifier\ que\ la\ barrière\ ne\ sort\ pas\ du\ plateau}}
+\DoxyCodeLine{00319\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (x\ +\ 1\ >=\ TAILLE\_PLATEAU)\ \{}
+\DoxyCodeLine{00320\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00321\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00322\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Vérifier\ qu'il\ n'y\ a\ pas\ déjà\ une\ barrière\ horizontale\ à\ cet\ endroit}}
+\DoxyCodeLine{00323\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (plateau[y][x].barrierebas\ ||\ plateau[y][x\ +\ 1].barrierebas)\ \{}
+\DoxyCodeLine{00324\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00325\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00326\ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (orientation\ ==\ \textcolor{charliteral}{'v'})\ \{}
+\DoxyCodeLine{00327\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Vérifier\ que\ la\ barrière\ ne\ sort\ pas\ du\ plateau}}
+\DoxyCodeLine{00328\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (y\ +\ 1\ >=\ TAILLE\_PLATEAU)\ \{}
+\DoxyCodeLine{00329\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00330\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00331\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Vérifier\ qu'il\ n'y\ a\ pas\ déjà\ une\ barrière\ verticale\ à\ cet\ endroit}}
+\DoxyCodeLine{00332\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (plateau[y][x].barrieredroite\ ||\ plateau[y\ +\ 1][x].barrieredroite)\ \{}
+\DoxyCodeLine{00333\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00334\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00335\ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \{}
+\DoxyCodeLine{00336\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Orientation\ invalide}}
+\DoxyCodeLine{00337\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00338\ \ \ \ \ \}}
+\DoxyCodeLine{00339\ }
+\DoxyCodeLine{00340\ \ \ \ \ \textcolor{comment}{//\ Vérifier\ que\ le\ placement\ de\ la\ barrière\ ne\ bloque\ pas\ complètement\ le\ chemin}}
+\DoxyCodeLine{00341\ \ \ \ \ \textcolor{comment}{//\ Pour\ simplifier,\ cette\ vérification\ n'est\ pas\ implémentée\ ici}}
+\DoxyCodeLine{00342\ \ \ \ \ \textcolor{comment}{//\ Vous\ pouvez\ l'ajouter\ ultérieurement}}
+\DoxyCodeLine{00343\ }
+\DoxyCodeLine{00344\ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00345\ \}}
+\DoxyCodeLine{00346\ }
+\DoxyCodeLine{00355\ \textcolor{keywordtype}{void}\ annulerDernierCoup(Joueur\ *joueur,\ CasePlateau\ plateau[TAILLE\_PLATEAU][TAILLE\_PLATEAU])\ \{}
+\DoxyCodeLine{00356\ \ \ \ \ \textcolor{comment}{//\ Implémenter\ l'annulation\ du\ dernier\ coup}}
+\DoxyCodeLine{00357\ \ \ \ \ printf(\textcolor{stringliteral}{"{}Annulation\ du\ dernier\ coup\ non\ implémentée.\(\backslash\)n"{}});}
+\DoxyCodeLine{00358\ \}}
+
+\end{DoxyCode}

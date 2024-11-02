@@ -3,6 +3,14 @@
 #include "outils.h"
 #include "joueur.h"
 
+/**
+ * @brief Initialise le plateau de jeu.
+ *
+ * Réinitialise chaque case du plateau en la mettant à VIDE,
+ * sans barrières ni pions, et avec les couleurs par défaut.
+ *
+ * @param plateau Le plateau de jeu à initialiser.
+ */
 void initialisationplateau(CasePlateau plateau[TAILLE_PLATEAU][TAILLE_PLATEAU]) {
     for (int i = 0; i < TAILLE_PLATEAU; i++) {
         for (int j = 0; j < TAILLE_PLATEAU; j++) {
@@ -18,6 +26,16 @@ void initialisationplateau(CasePlateau plateau[TAILLE_PLATEAU][TAILLE_PLATEAU]) 
     }
 }
 
+/**
+ * @brief Affiche le plateau de jeu.
+ *
+ * Affiche le plateau en montrant les pions des joueurs,
+ * les barrières placées, ainsi que les numéros de lignes et de colonnes.
+ *
+ * @param plateau Le plateau de jeu.
+ * @param joueurs Le tableau des joueurs.
+ * @param nombredejoueurs Le nombre total de joueurs.
+ */
 void afficherplateau(CasePlateau plateau[TAILLE_PLATEAU][TAILLE_PLATEAU], Joueur joueurs[], int nombredejoueurs) {
     // Afficher la numérotation des colonnes
     printf(" ");
@@ -28,7 +46,7 @@ void afficherplateau(CasePlateau plateau[TAILLE_PLATEAU][TAILLE_PLATEAU], Joueur
 
     for (int lig = 0; lig < TAILLE_PLATEAU; lig++) {
         // Affichage des barrières horizontales supérieures
-        printf(" ");
+        printf("  ");
         for (int col = 0; col < TAILLE_PLATEAU; col++) {
             if (plateau[lig][col].barrierehaut) {
                 printf(" ---");
@@ -65,7 +83,7 @@ void afficherplateau(CasePlateau plateau[TAILLE_PLATEAU][TAILLE_PLATEAU], Joueur
         printf("\n");
 
         // Affichage des barrières horizontales inférieures
-        printf(" ");
+        printf("  ");
         for (int col = 0; col < TAILLE_PLATEAU; col++) {
             if (plateau[lig][col].barrierebas) {
                 printf(" ---");

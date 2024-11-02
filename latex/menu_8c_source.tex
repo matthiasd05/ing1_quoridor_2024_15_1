@@ -1,0 +1,41 @@
+\doxysection{menu.\+c}
+\label{menu_8c_source}\index{C:/Users/FlowUp/Documents/GitHub/ing1\_quoridor\_2024\_15\_1/ing1\_smestre1\_info/menu.c@{C:/Users/FlowUp/Documents/GitHub/ing1\_quoridor\_2024\_15\_1/ing1\_smestre1\_info/menu.c}}
+\textbf{ Go to the documentation of this file.}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#include\ <stdio.h>}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#include\ "{}menu.h"{}}}
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ "{}jeux.h"{}}}
+\DoxyCodeLine{00004\ }
+\DoxyCodeLine{00011\ \textcolor{keywordtype}{void}\ affichermenuprincipal()\ \{}
+\DoxyCodeLine{00012\ \ \ \ \ \textcolor{keywordtype}{int}\ choix;}
+\DoxyCodeLine{00013\ \ \ \ \ \textcolor{keywordflow}{do}\ \{}
+\DoxyCodeLine{00014\ \ \ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}Menu\ Principal\(\backslash\)n"{}});}
+\DoxyCodeLine{00015\ \ \ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}1.\ Nouvelle\ Partie\(\backslash\)n"{}});}
+\DoxyCodeLine{00016\ \ \ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}2.\ Charger\ une\ Partie\(\backslash\)n"{}});}
+\DoxyCodeLine{00017\ \ \ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}3.\ Afficher\ l'Aide\(\backslash\)n"{}});}
+\DoxyCodeLine{00018\ \ \ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}4.\ Afficher\ les\ Scores\(\backslash\)n"{}});}
+\DoxyCodeLine{00019\ \ \ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}5.\ Quitter\(\backslash\)n"{}});}
+\DoxyCodeLine{00020\ \ \ \ \ \ \ \ \ scanf(\textcolor{stringliteral}{"{}\%d"{}},\ \&choix);}
+\DoxyCodeLine{00021\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{switch}\ (choix)\ \{}
+\DoxyCodeLine{00022\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ 1:}
+\DoxyCodeLine{00023\ \ \ \ \ \ \ \ \ \ \ \ \ nouvellepartie();}
+\DoxyCodeLine{00024\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00025\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ 2:}
+\DoxyCodeLine{00026\ \ \ \ \ \ \ \ \ \ \ \ \ chargerpartie();}
+\DoxyCodeLine{00027\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00028\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ 3:}
+\DoxyCodeLine{00029\ \ \ \ \ \ \ \ \ \ \ \ \ afficheraide();}
+\DoxyCodeLine{00030\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00031\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ 4:}
+\DoxyCodeLine{00032\ \ \ \ \ \ \ \ \ \ \ \ \ afficherscore();}
+\DoxyCodeLine{00033\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00034\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ 5:}
+\DoxyCodeLine{00035\ \ \ \ \ \ \ \ \ \ \ \ \ quitterlejeu();}
+\DoxyCodeLine{00036\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00037\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{default}:}
+\DoxyCodeLine{00038\ \ \ \ \ \ \ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}Le\ choix\ n'est\ pas\ correct\(\backslash\)n"{}});}
+\DoxyCodeLine{00039\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00040\ \ \ \ \ \}\ \textcolor{keywordflow}{while}\ (choix\ !=\ 5);}
+\DoxyCodeLine{00041\ \}}
+
+\end{DoxyCode}

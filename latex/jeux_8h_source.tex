@@ -1,0 +1,38 @@
+\doxysection{jeux.\+h}
+\label{jeux_8h_source}\index{C:/Users/FlowUp/Documents/GitHub/ing1\_quoridor\_2024\_15\_1/ing1\_smestre1\_info/jeux.h@{C:/Users/FlowUp/Documents/GitHub/ing1\_quoridor\_2024\_15\_1/ing1\_smestre1\_info/jeux.h}}
+\textbf{ Go to the documentation of this file.}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ JEUX\_H}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ JEUX\_H}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ "{}plateau.h"{}}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ "{}joueur.h"{}}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ <stdbool.h>}}
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00011\ \textcolor{keywordtype}{void}\ nouvellepartie();}
+\DoxyCodeLine{00012\ }
+\DoxyCodeLine{00016\ \textcolor{keywordtype}{void}\ chargerpartie();}
+\DoxyCodeLine{00017\ }
+\DoxyCodeLine{00021\ \textcolor{keywordtype}{void}\ afficheraide();}
+\DoxyCodeLine{00022\ }
+\DoxyCodeLine{00026\ \textcolor{keywordtype}{void}\ afficherscore();}
+\DoxyCodeLine{00027\ }
+\DoxyCodeLine{00031\ \textcolor{keywordtype}{void}\ quitterlejeu();}
+\DoxyCodeLine{00032\ }
+\DoxyCodeLine{00041\ \textcolor{keywordtype}{void}\ jouerTour(Joueur\ *joueur,\ CasePlateau\ plateau[TAILLE\_PLATEAU][TAILLE\_PLATEAU],\ Joueur\ joueurs[],\ \textcolor{keywordtype}{int}\ nombredejoueur);}
+\DoxyCodeLine{00042\ }
+\DoxyCodeLine{00054\ \textcolor{keywordtype}{bool}\ estDeplacementValide(Joueur\ *joueur,\ \textcolor{keywordtype}{int}\ x,\ \textcolor{keywordtype}{int}\ y,\ CasePlateau\ plateau[TAILLE\_PLATEAU][TAILLE\_PLATEAU],\ Joueur\ joueurs[],\ \textcolor{keywordtype}{int}\ nombredejoueur);}
+\DoxyCodeLine{00055\ }
+\DoxyCodeLine{00064\ \textcolor{keywordtype}{void}\ deplacerPion(Joueur\ *joueur,\ CasePlateau\ plateau[TAILLE\_PLATEAU][TAILLE\_PLATEAU],\ Joueur\ joueurs[],\ \textcolor{keywordtype}{int}\ nombredejoueur);}
+\DoxyCodeLine{00065\ }
+\DoxyCodeLine{00072\ \textcolor{keywordtype}{void}\ placerBarriere(Joueur\ *joueur,\ CasePlateau\ plateau[TAILLE\_PLATEAU][TAILLE\_PLATEAU]);}
+\DoxyCodeLine{00073\ }
+\DoxyCodeLine{00083\ \textcolor{keywordtype}{bool}\ estPlacementBarriereValide(\textcolor{keywordtype}{int}\ x,\ \textcolor{keywordtype}{int}\ y,\ \textcolor{keywordtype}{char}\ orientation,\ CasePlateau\ plateau[TAILLE\_PLATEAU][TAILLE\_PLATEAU]);}
+\DoxyCodeLine{00084\ }
+\DoxyCodeLine{00091\ \textcolor{keywordtype}{bool}\ verifierFinDePartie(Joueur\ *joueur);}
+\DoxyCodeLine{00092\ }
+\DoxyCodeLine{00099\ \textcolor{keywordtype}{void}\ annulerDernierCoup(Joueur\ *joueur,\ CasePlateau\ plateau[TAILLE\_PLATEAU][TAILLE\_PLATEAU]);}
+\DoxyCodeLine{00100\ }
+\DoxyCodeLine{00101\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ JEUX\_H}}
+
+\end{DoxyCode}

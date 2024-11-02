@@ -1,0 +1,14 @@
+<map id="C:/Users/FlowUp/Documents/GitHub/ing1_quoridor_2024_15_1/ing1_smestre1_info/plateau.c" name="C:/Users/FlowUp/Documents/GitHub/ing1_quoridor_2024_15_1/ing1_smestre1_info/plateau.c">
+<area shape="rect" id="Node000001" title=" " alt="" coords="50,5,280,64"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="5,112,66,139"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="124,67,68,105,65,101,121,62"/>
+<area shape="rect" id="Node000003" href="$plateau_8h.html" title=" " alt="" coords="90,112,165,139"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="155,65,141,99,136,97,150,63"/>
+<area shape="rect" id="Node000005" href="$joueur_8h.html" title=" " alt="" coords="168,187,236,213"/>
+<area shape="poly" id="edge6_Node000001_Node000005" title=" " alt="" coords="174,64,199,171,193,172,169,65"/>
+<area shape="rect" id="Node000006" href="$outils_8h.html" title=" " alt="" coords="240,112,303,139"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="201,62,246,100,243,104,197,66"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="70,187,145,213"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="127,140,118,173,112,171,121,138"/>
+<area shape="poly" id="edge4_Node000003_Node000005" title=" " alt="" coords="142,137,180,174,177,178,139,141"/>
+</map>
