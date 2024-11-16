@@ -14,6 +14,7 @@ typedef struct {
     int positionX;        /**< Position X sur le plateau */
     int positionY;        /**< Position Y sur le plateau */
     int score;            /**< Score du joueur */
+    int scorePartie;      /**< Score obtenu lors de la partie en cours*/
 } Joueur;
 
 /**

@@ -14,6 +14,7 @@ set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "C:/Users/FlowUp/Documents/GitHub/ing1_quoridor_2024_15_1/ing1_smestre1_info/menu.c" "CMakeFiles/ing1_smestre1_info.dir/menu.c.obj" "gcc" "CMakeFiles/ing1_smestre1_info.dir/menu.c.obj.d"
   "C:/Users/FlowUp/Documents/GitHub/ing1_quoridor_2024_15_1/ing1_smestre1_info/outils.c" "CMakeFiles/ing1_smestre1_info.dir/outils.c.obj" "gcc" "CMakeFiles/ing1_smestre1_info.dir/outils.c.obj.d"
   "C:/Users/FlowUp/Documents/GitHub/ing1_quoridor_2024_15_1/ing1_smestre1_info/plateau.c" "CMakeFiles/ing1_smestre1_info.dir/plateau.c.obj" "gcc" "CMakeFiles/ing1_smestre1_info.dir/plateau.c.obj.d"
+  "C:/Users/FlowUp/Documents/GitHub/ing1_quoridor_2024_15_1/ing1_smestre1_info/score.c" "CMakeFiles/ing1_smestre1_info.dir/score.c.obj" "gcc" "CMakeFiles/ing1_smestre1_info.dir/score.c.obj.d"
   )
 
 # Targets to which this target links which contain Fortran sources.

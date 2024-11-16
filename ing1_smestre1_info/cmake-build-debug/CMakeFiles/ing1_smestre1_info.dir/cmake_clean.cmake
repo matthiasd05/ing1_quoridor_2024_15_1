@@ -11,6 +11,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/ing1_smestre1_info.dir/outils.c.obj.d"
   "CMakeFiles/ing1_smestre1_info.dir/plateau.c.obj"
   "CMakeFiles/ing1_smestre1_info.dir/plateau.c.obj.d"
+  "CMakeFiles/ing1_smestre1_info.dir/score.c.obj"
+  "CMakeFiles/ing1_smestre1_info.dir/score.c.obj.d"
   "ing1_smestre1_info.exe"
   "ing1_smestre1_info.exe.manifest"
   "ing1_smestre1_info.pdb"

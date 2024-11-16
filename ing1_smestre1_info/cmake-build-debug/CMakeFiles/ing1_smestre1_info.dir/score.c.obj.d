@@ -1,5 +1,6 @@
-CMakeFiles/ing1_smestre1_info.dir/jeux.c.obj: \
- C:\Users\FlowUp\Documents\GitHub\ing1_quoridor_2024_15_1\ing1_smestre1_info\jeux.c \
+CMakeFiles/ing1_smestre1_info.dir/score.c.obj: \
+ C:\Users\FlowUp\Documents\GitHub\ing1_quoridor_2024_15_1\ing1_smestre1_info\score.c \
+ C:\Users\FlowUp\Documents\GitHub\ing1_quoridor_2024_15_1\ing1_smestre1_info\score.h \
  C:/Program\ Files/JetBrains/CLion\ 2024.2.2/bin/mingw/x86_64-w64-mingw32/include/stdio.h \
  C:/Program\ Files/JetBrains/CLion\ 2024.2.2/bin/mingw/x86_64-w64-mingw32/include/corecrt_stdio_config.h \
  C:/Program\ Files/JetBrains/CLion\ 2024.2.2/bin/mingw/x86_64-w64-mingw32/include/corecrt.h \
@@ -11,21 +12,15 @@ CMakeFiles/ing1_smestre1_info.dir/jeux.c.obj: \
  C:/Program\ Files/JetBrains/CLion\ 2024.2.2/bin/mingw/x86_64-w64-mingw32/include/_mingw_off_t.h \
  C:/Program\ Files/JetBrains/CLion\ 2024.2.2/bin/mingw/x86_64-w64-mingw32/include/swprintf.inl \
  C:/Program\ Files/JetBrains/CLion\ 2024.2.2/bin/mingw/x86_64-w64-mingw32/include/sec_api/stdio_s.h \
- C:/Program\ Files/JetBrains/CLion\ 2024.2.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/stdbool.h \
+ C:/Program\ Files/JetBrains/CLion\ 2024.2.2/bin/mingw/x86_64-w64-mingw32/include/string.h \
+ C:/Program\ Files/JetBrains/CLion\ 2024.2.2/bin/mingw/x86_64-w64-mingw32/include/crtdefs.h \
+ C:/Program\ Files/JetBrains/CLion\ 2024.2.2/bin/mingw/x86_64-w64-mingw32/include/sec_api/string_s.h \
  C:/Program\ Files/JetBrains/CLion\ 2024.2.2/bin/mingw/x86_64-w64-mingw32/include/stdlib.h \
  C:/Program\ Files/JetBrains/CLion\ 2024.2.2/bin/mingw/x86_64-w64-mingw32/include/corecrt_wstdlib.h \
  C:/Program\ Files/JetBrains/CLion\ 2024.2.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/limits.h \
  C:/Program\ Files/JetBrains/CLion\ 2024.2.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/syslimits.h \
  C:/Program\ Files/JetBrains/CLion\ 2024.2.2/bin/mingw/x86_64-w64-mingw32/include/limits.h \
- C:/Program\ Files/JetBrains/CLion\ 2024.2.2/bin/mingw/x86_64-w64-mingw32/include/crtdefs.h \
  C:/Program\ Files/JetBrains/CLion\ 2024.2.2/bin/mingw/x86_64-w64-mingw32/include/sec_api/stdlib_s.h \
  C:/Program\ Files/JetBrains/CLion\ 2024.2.2/bin/mingw/x86_64-w64-mingw32/include/malloc.h \
  C:/Program\ Files/JetBrains/CLion\ 2024.2.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/mm_malloc.h \
- C:/Program\ Files/JetBrains/CLion\ 2024.2.2/bin/mingw/x86_64-w64-mingw32/include/errno.h \
- C:\Users\FlowUp\Documents\GitHub\ing1_quoridor_2024_15_1\ing1_smestre1_info\joueur.h \
- C:\Users\FlowUp\Documents\GitHub\ing1_quoridor_2024_15_1\ing1_smestre1_info\plateau.h \
- C:\Users\FlowUp\Documents\GitHub\ing1_quoridor_2024_15_1\ing1_smestre1_info\jeux.h \
- C:\Users\FlowUp\Documents\GitHub\ing1_quoridor_2024_15_1\ing1_smestre1_info\outils.h \
- C:\Users\FlowUp\Documents\GitHub\ing1_quoridor_2024_15_1\ing1_smestre1_info\score.h \
- C:/Program\ Files/JetBrains/CLion\ 2024.2.2/bin/mingw/x86_64-w64-mingw32/include/string.h \
- C:/Program\ Files/JetBrains/CLion\ 2024.2.2/bin/mingw/x86_64-w64-mingw32/include/sec_api/string_s.h
+ C:/Program\ Files/JetBrains/CLion\ 2024.2.2/bin/mingw/x86_64-w64-mingw32/include/errno.h

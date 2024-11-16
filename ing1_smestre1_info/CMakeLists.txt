@@ -14,4 +14,6 @@ add_executable(ing1_smestre1_info main.c
         ../plateau.h
         joueur.h
         outils.c
-        outils.h)
+        outils.h
+        score.c
+        score.h)

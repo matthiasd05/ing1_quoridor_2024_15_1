@@ -97,7 +97,7 @@ void afficherplateau(CasePlateau plateau[TAILLE_PLATEAU][TAILLE_PLATEAU], Joueur
     // Affichage des informations des joueurs
     printf("\n");
     for (int i = 0; i < nombredejoueurs; i++) {
-        printf("Joueur %d: %s (Pion: %c, Barrières restantes: %d)\n",
+        printf("Joueur %d: %s (Pion: %c, Barrieres restantes: %d)\n",
                joueurs[i].numJoueur, joueurs[i].nom, joueurs[i].pion, joueurs[i].nbBarriere);
     }
 }

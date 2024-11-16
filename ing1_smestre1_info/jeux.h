@@ -31,6 +31,16 @@ void afficherscore();
 void quitterlejeu();
 
 /**
+ * @brief Joue une partie chargée depuis une sauvegarde.
+ *
+ * @param plateau Le plateau de jeu chargé.
+ * @param joueurs Tableau des joueurs chargés.
+ * @param nombredejoueurs Nombre total de joueurs.
+ * @param joueurCourant Indice du joueur dont c'est le tour.
+ */
+void jouerPartieChargee(CasePlateau plateau[TAILLE_PLATEAU][TAILLE_PLATEAU], Joueur joueurs[], int nombredejoueurs, int joueurCourant);
+
+/**
  * @brief Gère le tour d'un joueur.
  *
  * @param joueur Pointeur vers le joueur qui joue son tour.
@@ -97,5 +107,15 @@ bool verifierFinDePartie(Joueur *joueur);
  * @param plateau Le plateau de jeu.
  */
 void annulerDernierCoup(Joueur *joueur, CasePlateau plateau[TAILLE_PLATEAU][TAILLE_PLATEAU]);
+
+/**
+ * @brief Sauvegarde la partie actuelle dans un fichier.
+ *
+ * @param plateau Le plateau de jeu.
+ * @param joueurs Tableau des joueurs.
+ * @param nombredejoueurs Nombre total de joueurs.
+ * @param joueurCourant Indice du joueur dont c'est le tour.
+ */
+void sauvegarderPartie(CasePlateau plateau[TAILLE_PLATEAU][TAILLE_PLATEAU], Joueur joueurs[], int nombredejoueurs, int joueurCourant);
 
 #endif // JEUX_H

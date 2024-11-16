@@ -272,6 +272,30 @@ plateau.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\ing1_smestre1_info.dir\build.make CMakeFiles/ing1_smestre1_info.dir/plateau.c.s
 .PHONY : plateau.c.s
 
+score.obj: score.c.obj
+.PHONY : score.obj
+
+# target to build an object file
+score.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\ing1_smestre1_info.dir\build.make CMakeFiles/ing1_smestre1_info.dir/score.c.obj
+.PHONY : score.c.obj
+
+score.i: score.c.i
+.PHONY : score.i
+
+# target to preprocess a source file
+score.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\ing1_smestre1_info.dir\build.make CMakeFiles/ing1_smestre1_info.dir/score.c.i
+.PHONY : score.c.i
+
+score.s: score.c.s
+.PHONY : score.s
+
+# target to generate assembly for a file
+score.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\ing1_smestre1_info.dir\build.make CMakeFiles/ing1_smestre1_info.dir/score.c.s
+.PHONY : score.c.s
+
 # Help Target
 help:
 	@echo The following are some of the valid targets for this Makefile:
@@ -299,6 +323,9 @@ help:
 	@echo ... plateau.obj
 	@echo ... plateau.i
 	@echo ... plateau.s
+	@echo ... score.obj
+	@echo ... score.i
+	@echo ... score.s
 .PHONY : help
 
 
