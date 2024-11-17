@@ -15,4 +15,8 @@ CMakeFiles/ing1_smestre1_info.dir/menu.c.obj: \
  C:\Users\FlowUp\Documents\GitHub\ing1_quoridor_2024_15_1\ing1_smestre1_info\jeux.h \
  C:\Users\FlowUp\Documents\GitHub\ing1_quoridor_2024_15_1\ing1_smestre1_info\plateau.h \
  C:/Program\ Files/JetBrains/CLion\ 2024.2.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/stdbool.h \
- C:\Users\FlowUp\Documents\GitHub\ing1_quoridor_2024_15_1\ing1_smestre1_info\joueur.h
+ C:\Users\FlowUp\Documents\GitHub\ing1_quoridor_2024_15_1\ing1_smestre1_info\joueur.h \
+ C:\Users\FlowUp\Documents\GitHub\ing1_quoridor_2024_15_1\ing1_smestre1_info\score.h \
+ C:/Program\ Files/JetBrains/CLion\ 2024.2.2/bin/mingw/x86_64-w64-mingw32/include/string.h \
+ C:/Program\ Files/JetBrains/CLion\ 2024.2.2/bin/mingw/x86_64-w64-mingw32/include/crtdefs.h \
+ C:/Program\ Files/JetBrains/CLion\ 2024.2.2/bin/mingw/x86_64-w64-mingw32/include/sec_api/string_s.h

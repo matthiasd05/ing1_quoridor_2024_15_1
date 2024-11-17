@@ -1,11 +1,15 @@
 #include <stdio.h>
 #include <stdbool.h>
 #include <stdlib.h>
+#include <unistd.h>
+#include <limits.h>
 #include "joueur.h"
 #include "plateau.h"
 #include "jeux.h"
 #include "outils.h"
 #include "score.h"
+#include <string.h>
+
 /**
  * @brief Démarre une nouvelle partie de jeu.
  *
@@ -14,6 +18,12 @@
  * et la mise à jour du fichier de scores à la fin de la partie.
  */
 void nouvellepartie() {
+    char cwd[PATH_MAX];
+    if (getcwd(cwd, sizeof(cwd)) != NULL) {
+        printf("Répertoire de travail courant : %s\n", cwd);
+    } else {
+        perror("getcwd");
+    }
     int nombredejoueur;
     printf("Entrez le nombre de joueurs (2 ou 4): \n");
     scanf("%d", &nombredejoueur);
@@ -79,24 +89,7 @@ void nouvellepartie() {
         printf("finDePartie après vérification : %d\n", finDePartie);
 
         if (finDePartie) {
-            printf("Le joueur %s a gagné!\n", joueurs[joueurCourant].nom);
-
-            // Mettre à jour les scores
-            // Ajouter 5 points au gagnant
-            joueurs[joueurCourant].scorePartie += 5;
-
-            // Mettre à jour les scores de tous les joueurs
-            for (int i = 0; i < nombredejoueur; i++) {
-                printf("ScorePartie pour %s est %d\n", joueurs[i].nom, joueurs[i].scorePartie);
-                mettreAJourScore(scores, &nbJoueursScores, joueurs[i].nom, joueurs[i].scorePartie);
-            }
-
-            // Sauvegarder les scores mis à jour
-            printf("Appel de sauvegarderScores() depuis nouvellepartie()\n");
-            sauvegarderScores(scores, nbJoueursScores);
-
-
-
+            gererFinDePartie(joueurs, nombredejoueur, joueurCourant, scores, &nbJoueursScores);
             break;
         }
 
@@ -216,6 +209,7 @@ void chargerpartie() {
                &joueurs[i].positionY,
                &joueurs[i].score);
         joueurs[i].numJoueur = i + 1;
+        joueurs[i].scorePartie = 0; // Initialiser le score de la partie
     }
 
     // Charger l'état du plateau
@@ -252,8 +246,14 @@ void chargerpartie() {
     fclose(fichier);
     printf("Partie chargée avec succès depuis le fichier %s.\n", nomFichier);
 
+    // Initialiser les scores
+    ScoreJoueur scores[MAX_JOUEURS];
+    int nbJoueursScores = 0;
+    printf("Appel de lireScores() depuis chargerpartie()\n");
+    lireScores(scores, &nbJoueursScores);
+
     // Lancer la partie chargée
-    jouerPartieChargee(plateau, joueurs, nombredejoueurs, joueurCourant);
+    jouerPartieChargee(plateau, joueurs, nombredejoueurs, joueurCourant, scores, &nbJoueursScores);
 }
 
 
@@ -267,7 +267,7 @@ void chargerpartie() {
  * @param nombredejoueurs Nombre total de joueurs.
  * @param joueurCourant Indice du joueur dont c'est le tour.
  */
-void jouerPartieChargee(CasePlateau plateau[TAILLE_PLATEAU][TAILLE_PLATEAU], Joueur joueurs[], int nombredejoueurs, int joueurCourant) {
+void jouerPartieChargee(CasePlateau plateau[TAILLE_PLATEAU][TAILLE_PLATEAU], Joueur joueurs[], int nombredejoueurs, int joueurCourant, ScoreJoueur scores[], int *nbJoueursScores) {
     bool finDePartie = false;
     int indiceJoueur = joueurCourant;
 
@@ -276,8 +276,7 @@ void jouerPartieChargee(CasePlateau plateau[TAILLE_PLATEAU][TAILLE_PLATEAU], Jou
         jouerTour(&joueurs[indiceJoueur], plateau, joueurs, nombredejoueurs);
         finDePartie = verifierFinDePartie(&joueurs[indiceJoueur]);
         if (finDePartie) {
-            printf("Le joueur %s a gagne!\n", joueurs[indiceJoueur].nom);
-            // Calcul des scores et sauvegarde si nécessaire
+            gererFinDePartie(joueurs, nombredejoueurs, indiceJoueur, scores, nbJoueursScores);
             break;
         }
         indiceJoueur = (indiceJoueur + 1) % nombredejoueurs;
@@ -574,4 +573,21 @@ bool estPlacementBarriereValide(int x, int y, char orientation, CasePlateau plat
 void annulerDernierCoup(Joueur *joueur, CasePlateau plateau[TAILLE_PLATEAU][TAILLE_PLATEAU]) {
     // Implémenter l'annulation du dernier coup
     printf("Annulation du dernier coup non implementee.\n");
+}
+
+void gererFinDePartie(Joueur joueurs[], int nombredejoueur, int joueurGagnantIndex, ScoreJoueur scores[], int *nbJoueursScores) {
+    printf("Le joueur %s a gagné!\n", joueurs[joueurGagnantIndex].nom);
+
+    // Ajouter 5 points au gagnant
+    joueurs[joueurGagnantIndex].scorePartie += 5;
+
+    // Mettre à jour les scores de tous les joueurs
+    for (int i = 0; i < nombredejoueur; i++) {
+        printf("ScorePartie pour %s est %d\n", joueurs[i].nom, joueurs[i].scorePartie);
+        mettreAJourScore(scores, nbJoueursScores, joueurs[i].nom, joueurs[i].scorePartie);
+    }
+
+    // Sauvegarder les scores mis à jour
+    printf("Appel de sauvegarderScores() depuis gererFinDePartie()\n");
+    sauvegarderScores(scores, *nbJoueursScores);
 }

@@ -3,6 +3,7 @@
 
 #include "plateau.h"
 #include "joueur.h"
+#include "score.h"
 #include <stdbool.h>
 
 /**
@@ -38,8 +39,7 @@ void quitterlejeu();
  * @param nombredejoueurs Nombre total de joueurs.
  * @param joueurCourant Indice du joueur dont c'est le tour.
  */
-void jouerPartieChargee(CasePlateau plateau[TAILLE_PLATEAU][TAILLE_PLATEAU], Joueur joueurs[], int nombredejoueurs, int joueurCourant);
-
+void jouerPartieChargee(CasePlateau plateau[TAILLE_PLATEAU][TAILLE_PLATEAU], Joueur joueurs[], int nombredejoueurs, int joueurCourant, ScoreJoueur scores[], int *nbJoueursScores);
 /**
  * @brief Gère le tour d'un joueur.
  *
@@ -118,4 +118,5 @@ void annulerDernierCoup(Joueur *joueur, CasePlateau plateau[TAILLE_PLATEAU][TAIL
  */
 void sauvegarderPartie(CasePlateau plateau[TAILLE_PLATEAU][TAILLE_PLATEAU], Joueur joueurs[], int nombredejoueurs, int joueurCourant);
 
+void gererFinDePartie(Joueur joueurs[], int nombredejoueur, int joueurGagnantIndex, ScoreJoueur scores[], int *nbJoueursScores);
 #endif // JEUX_H

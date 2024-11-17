@@ -1,26 +1,16 @@
 #include "score.h"
 #include <stdlib.h>
 
-/**
- * @brief Lit les scores depuis le fichier et les stocke dans un tableau.
- *
- * @param scores Tableau pour stocker les scores des joueurs.
- * @param nbJoueurs Pointeur vers un entier pour stocker le nombre de joueurs lus.
- */
 void lireScores(ScoreJoueur scores[], int *nbJoueurs) {
     FILE *file1 = fopen("scores.txt", "r");
     if (file1 == NULL) {
-        printf("Aucun fichier de scores trouvé.\n"); // Message de débogage
-        perror("fopen");
+        printf("\nAucun fichier de scores trouvé. Un nouveau fichier sera créé lors de la sauvegarde.\n");
         *nbJoueurs = 0;
         return;
     }
 
-    printf("Lecture des scores...\n"); // Message de débogage
-
     *nbJoueurs = 0;
     while (fscanf(file1, "%49s %d", scores[*nbJoueurs].nom, &scores[*nbJoueurs].score) == 2) {
-        printf("Lu : %s %d\n", scores[*nbJoueurs].nom, scores[*nbJoueurs].score); // Message de débogage
         (*nbJoueurs)++;
         if (*nbJoueurs >= MAX_JOUEURS) {
             break;
@@ -30,17 +20,12 @@ void lireScores(ScoreJoueur scores[], int *nbJoueurs) {
     fclose(file1);
 }
 
-/**
- * @brief Sauvegarde les scores des joueurs dans le fichier.
- *
- * @param scores Tableau contenant les scores des joueurs.
- * @param nbJoueurs Nombre de joueurs à sauvegarder.
- */
 void sauvegarderScores(ScoreJoueur scores[], int nbJoueurs) {
     printf("Appel de sauvegarderScores() avec nbJoueurs = %d\n", nbJoueurs);
     FILE *file = fopen("scores.txt", "w");
     if (file == NULL) {
         printf("Erreur lors de l'ouverture du fichier de scores.\n");
+        perror("fopen");
         return;
     }
 
@@ -55,15 +40,6 @@ void sauvegarderScores(ScoreJoueur scores[], int nbJoueurs) {
     printf("Scores sauvegardés avec succès.\n");
 }
 
-
-/**
- * @brief Met à jour le score d'un joueur après une partie.
- *
- * @param scores Tableau contenant les scores des joueurs.
- * @param nbJoueurs Pointeur vers le nombre de joueurs.
- * @param nomJoueur Nom du joueur à mettre à jour.
- * @param scorePartie Score obtenu lors de la partie.
- */
 void mettreAJourScore(ScoreJoueur scores[], int *nbJoueurs, const char *nomJoueur, int scorePartie) {
     int indiceJoueur = -1;
 
