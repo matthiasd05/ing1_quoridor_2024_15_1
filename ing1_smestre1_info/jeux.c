@@ -3,6 +3,7 @@
 #include <stdlib.h>
 #include <unistd.h>
 #include <limits.h>
+#include <time.h>
 #include "joueur.h"
 #include "plateau.h"
 #include "jeux.h"
@@ -11,11 +12,11 @@
 #include <string.h>
 
 /**
- * @brief Démarre une nouvelle partie de jeu.
+ * @brief Démarre une nouvelle partie de jeu avec un joueur de départ aléatoire.
  *
  * Cette fonction initialise les joueurs, le plateau, et lance la boucle principale du jeu
- * jusqu'à ce qu'un joueur remporte la partie. Elle gère également le calcul des scores
- * et la mise à jour du fichier de scores à la fin de la partie.
+ * jusqu'à ce qu'un joueur remporte la partie. Le joueur qui commence est choisi aléatoirement.
+ * Elle gère également le calcul des scores et la mise à jour du fichier de scores à la fin de la partie.
  */
 void nouvellepartie() {
     char cwd[PATH_MAX];
@@ -71,9 +72,14 @@ void nouvellepartie() {
         plateau[y][x].symbole = joueurs[i].pion;
     }
 
+    // Initialiser le générateur de nombres aléatoires
+    srand(time(NULL));
+
+    // Choisir aléatoirement le joueur qui commence
+    int joueurCourant = rand() % nombredejoueur;
+
     // Lancer la boucle principale du jeu
     bool finDePartie = false;
-    int joueurCourant = 0;
 
     while (!finDePartie) {
         printf("Début du tour du joueur %d (%s)\n", joueurCourant + 1, joueurs[joueurCourant].nom);

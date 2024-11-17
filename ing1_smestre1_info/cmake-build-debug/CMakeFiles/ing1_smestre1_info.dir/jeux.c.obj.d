@@ -31,6 +31,11 @@ CMakeFiles/ing1_smestre1_info.dir/jeux.c.obj: \
  C:/Program\ Files/JetBrains/CLion\ 2024.2.2/bin/mingw/x86_64-w64-mingw32/include/sys/types.h \
  C:/Program\ Files/JetBrains/CLion\ 2024.2.2/bin/mingw/x86_64-w64-mingw32/include/getopt.h \
  C:/Program\ Files/JetBrains/CLion\ 2024.2.2/bin/mingw/x86_64-w64-mingw32/include/pthread_unistd.h \
+ C:/Program\ Files/JetBrains/CLion\ 2024.2.2/bin/mingw/x86_64-w64-mingw32/include/time.h \
+ C:/Program\ Files/JetBrains/CLion\ 2024.2.2/bin/mingw/x86_64-w64-mingw32/include/sys/timeb.h \
+ C:/Program\ Files/JetBrains/CLion\ 2024.2.2/bin/mingw/x86_64-w64-mingw32/include/sec_api/sys/timeb_s.h \
+ C:/Program\ Files/JetBrains/CLion\ 2024.2.2/bin/mingw/x86_64-w64-mingw32/include/_timeval.h \
+ C:/Program\ Files/JetBrains/CLion\ 2024.2.2/bin/mingw/x86_64-w64-mingw32/include/pthread_time.h \
  C:\Users\FlowUp\Documents\GitHub\ing1_quoridor_2024_15_1\ing1_smestre1_info\joueur.h \
  C:\Users\FlowUp\Documents\GitHub\ing1_quoridor_2024_15_1\ing1_smestre1_info\plateau.h \
  C:\Users\FlowUp\Documents\GitHub\ing1_quoridor_2024_15_1\ing1_smestre1_info\jeux.h \
