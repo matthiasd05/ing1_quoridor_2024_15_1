@@ -4,7 +4,7 @@
 void lireScores(ScoreJoueur scores[], int *nbJoueurs) {
     FILE *file1 = fopen("scores.txt", "r");
     if (file1 == NULL) {
-        printf("\nAucun fichier de scores trouvé. Un nouveau fichier sera créé lors de la sauvegarde.\n");
+        printf("\nAucun fichier de scores trouve. Un nouveau fichier sera cree lors de la sauvegarde.\n");
         *nbJoueurs = 0;
         return;
     }
@@ -37,7 +37,7 @@ void sauvegarderScores(ScoreJoueur scores[], int nbJoueurs) {
     }
 
     fclose(file);
-    printf("Scores sauvegardés avec succès.\n");
+    printf("Scores sauvegardes avec succes.\n");
 }
 
 void mettreAJourScore(ScoreJoueur scores[], int *nbJoueurs, const char *nomJoueur, int scorePartie) {

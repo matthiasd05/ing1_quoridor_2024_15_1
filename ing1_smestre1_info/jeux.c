@@ -21,7 +21,7 @@
 void nouvellepartie() {
     char cwd[PATH_MAX];
     if (getcwd(cwd, sizeof(cwd)) != NULL) {
-        printf("Répertoire de travail courant : %s\n", cwd);
+        printf("Repertoire de travail courant : %s\n", cwd);
     } else {
         perror("getcwd");
     }
@@ -82,7 +82,7 @@ void nouvellepartie() {
     bool finDePartie = false;
 
     while (!finDePartie) {
-        printf("Début du tour du joueur %d (%s)\n", joueurCourant + 1, joueurs[joueurCourant].nom);
+        printf("Debut du tour du joueur %d (%s)\n", joueurCourant + 1, joueurs[joueurCourant].nom);
         afficherplateau(plateau, joueurs, nombredejoueur);
         jouerTour(&joueurs[joueurCourant], plateau, joueurs, nombredejoueur);
 
@@ -92,7 +92,7 @@ void nouvellepartie() {
                joueurs[joueurCourant].positionX, joueurs[joueurCourant].positionY);
 
         finDePartie = verifierFinDePartie(&joueurs[joueurCourant]);
-        printf("finDePartie après vérification : %d\n", finDePartie);
+        printf("finDePartie apres verification : %d\n", finDePartie);
 
         if (finDePartie) {
             gererFinDePartie(joueurs, nombredejoueur, joueurCourant, scores, &nbJoueursScores);
@@ -118,8 +118,8 @@ void nouvellepartie() {
 void jouerTour(Joueur *joueur, CasePlateau plateau[TAILLE_PLATEAU][TAILLE_PLATEAU], Joueur joueurs[], int nombredejoueur) {
     int choix;
     printf("C'est le tour de %s.\n", joueur->nom);
-    printf("1. Déplacer le pion\n");
-    printf("2. Placer une barrière\n");
+    printf("1. Deplacer le pion\n");
+    printf("2. Placer une barriere\n");
     printf("3. Sauvegarder la partie\n");
     printf("4. Passer le tour\n");
     printf("5. Annuler le dernier coup\n");
@@ -144,7 +144,7 @@ void jouerTour(Joueur *joueur, CasePlateau plateau[TAILLE_PLATEAU][TAILLE_PLATEA
             annulerDernierCoup(joueur, plateau);
             break;
         default:
-            printf("Choix invalide. Veuillez réessayer.\n");
+            printf("Choix invalide. Veuillez reessayer.\n");
             jouerTour(joueur, plateau, joueurs, nombredejoueur);
     }
 }
@@ -250,7 +250,7 @@ void chargerpartie() {
     }
 
     fclose(fichier);
-    printf("Partie chargée avec succès depuis le fichier %s.\n", nomFichier);
+    printf("Partie chargee avec succes depuis le fichier %s.\n", nomFichier);
 
     // Initialiser les scores
     ScoreJoueur scores[MAX_JOUEURS];
@@ -342,7 +342,7 @@ void sauvegarderPartie(CasePlateau plateau[TAILLE_PLATEAU][TAILLE_PLATEAU], Joue
     }
 
     fclose(fichier);
-    printf("Partie sauvegardée avec succès dans le fichier %s.\n", nomFichier);
+    printf("Partie sauvegardée avec succes dans le fichier %s.\n", nomFichier);
 }
 
 
@@ -372,7 +372,7 @@ void afficherscore() {
 
     // Vérifier si des scores ont été lus
     if (nbJoueursScores == 0) {
-        printf("\nAucun score à afficher.\n");
+        printf("\nAucun score a afficher.\n");
         return;
     }
 
@@ -495,7 +495,7 @@ void placerBarriere(Joueur *joueur, CasePlateau plateau[TAILLE_PLATEAU][TAILLE_P
 
     int x, y;
     char orientation;
-    printf("Entrez les coordonnees de la case de départ pour la barriere (x y) :\n");
+    printf("Entrez les coordonnees de la case de depart pour la barriere (x y) :\n");
     scanf("%d %d", &x, &y);
     printf("Entrez l'orientation de la barrière (h pour horizontale, v pour verticale) :\n");
     scanf(" %c", &orientation);
