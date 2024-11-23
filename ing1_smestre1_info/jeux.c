@@ -34,7 +34,6 @@ void nouvellepartie() {
         return;
     }
 
-    // Lecture des scores actuels
     ScoreJoueur scores[MAX_JOUEURS];
     int nbJoueursScores = 0;
     lireScores(scores, &nbJoueursScores);
@@ -42,12 +41,9 @@ void nouvellepartie() {
     Joueur joueurs[nombredejoueur];
     creerjoueur(joueurs, nombredejoueur);
 
-    // Mise à jour des scores des joueurs
     for (int i = 0; i < nombredejoueur; i++) {
-        // Initialiser le score total du joueur
         joueurs[i].score = 0;
 
-        // Rechercher si le joueur existe déjà dans les scores
         for (int j = 0; j < nbJoueursScores; j++) {
             if (strcmp(joueurs[i].nom, scores[j].nom) == 0) {
                 // Le joueur existe, mettre à jour son score total
@@ -125,13 +121,15 @@ void jouerTour(Joueur *joueur, CasePlateau plateau[TAILLE_PLATEAU][TAILLE_PLATEA
     printf("5. Annuler le dernier coup\n");
     printf("Votre choix: ");
     scanf("%d", &choix);
-
     switch (choix) {
         case 1:
             deplacerPion(joueur, plateau, joueurs, nombredejoueur);
+            sauvegardetourprecedent(plateau, joueurs, nombredejoueur, joueur->numJoueur - 1);
             break;
         case 2:
             placerBarriere(joueur, plateau);
+            sauvegardetourprecedent(plateau, joueurs, nombredejoueur, joueur->numJoueur - 1);
+
             break;
         case 3:
             sauvegarderPartie(plateau, joueurs, nombredejoueur, joueur->numJoueur - 1);
@@ -139,9 +137,12 @@ void jouerTour(Joueur *joueur, CasePlateau plateau[TAILLE_PLATEAU][TAILLE_PLATEA
             break;
         case 4:
             printf("%s passe son tour.\n", joueur->nom);
+            sauvegardetourprecedent(plateau, joueurs, nombredejoueur, joueur->numJoueur - 1);
+
             break;
         case 5:
-            annulerDernierCoup(joueur, plateau);
+            initialisationplateau(plateau);
+            annulercoupprecedent(plateau, joueurs, &nombredejoueur, &joueur->numJoueur);
             break;
         default:
             printf("Choix invalide. Veuillez reessayer.\n");
@@ -576,10 +577,6 @@ bool estPlacementBarriereValide(int x, int y, char orientation, CasePlateau plat
  * @param joueur Pointeur vers le joueur.
  * @param plateau Le plateau de jeu.
  */
-void annulerDernierCoup(Joueur *joueur, CasePlateau plateau[TAILLE_PLATEAU][TAILLE_PLATEAU]) {
-    // Implémenter l'annulation du dernier coup
-    printf("Annulation du dernier coup non implementee.\n");
-}
 
 void gererFinDePartie(Joueur joueurs[], int nombredejoueur, int joueurGagnantIndex, ScoreJoueur scores[], int *nbJoueursScores) {
     printf("Le joueur %s a gagné!\n", joueurs[joueurGagnantIndex].nom);
@@ -596,4 +593,105 @@ void gererFinDePartie(Joueur joueurs[], int nombredejoueur, int joueurGagnantInd
     // Sauvegarder les scores mis à jour
     printf("Appel de sauvegarderScores() depuis gererFinDePartie()\n");
     sauvegarderScores(scores, *nbJoueursScores);
+}
+
+void annulercoupprecedent(CasePlateau plateau[TAILLE_PLATEAU][TAILLE_PLATEAU], Joueur joueurs[], int *nombredejoueurs, int *joueurCourant) {
+    FILE *fichier = fopen("annulationcoup.txt", "r");
+    if (fichier == NULL) {
+        printf("Erreur lors de l'ouverture du fichier de sauvegarde.\n");
+        return;
+    }
+
+    // Charger le nombre de joueurs et le joueur courant
+    fscanf(fichier, "%d", nombredejoueurs);
+    fscanf(fichier, "%d", joueurCourant);
+
+    // Charger les informations des joueurs
+    for (int i = 0; i < *nombredejoueurs; i++) {
+        fscanf(fichier, "%s %c %d %d %d %d",
+               joueurs[i].nom,
+               &joueurs[i].pion,
+               &joueurs[i].nbBarriere,
+               &joueurs[i].positionX,
+               &joueurs[i].positionY,
+               &joueurs[i].score);
+        joueurs[i].numJoueur = i + 1;
+        joueurs[i].scorePartie = 0; // Initialiser le score de la partie
+    }
+
+    // Charger l'état du plateau
+    for (int i = 0; i < TAILLE_PLATEAU; i++) {
+        for (int j = 0; j < TAILLE_PLATEAU; j++) {
+            int type, symbole_int, couleurtexte, couleurfond;
+            int barrierehaut, barrierebas, barrieregauche, barrieredroite;
+            char symbole;
+
+            fscanf(fichier, "%d %d %d %d %d %d %d %d",
+                   &type,
+                   &symbole_int,
+                   &barrierehaut,
+                   &barrierebas,
+                   &barrieregauche,
+                   &barrieredroite,
+                   &couleurtexte,
+                   &couleurfond);
+
+            symbole = (char)symbole_int;
+
+            plateau[i][j].type = type;
+            plateau[i][j].symbole = symbole;
+            plateau[i][j].barrierehaut = barrierehaut;
+            plateau[i][j].barrierebas = barrierebas;
+            plateau[i][j].barrieregauche = barrieregauche;
+            plateau[i][j].barrieredroite = barrieredroite;
+            plateau[i][j].couleurtexte = couleurtexte;
+            plateau[i][j].couleurfond = couleurfond;
+        }
+    }
+
+    fclose(fichier);
+    printf("La partie a été chargée pour annuler le dernier coup.\n");
+}
+
+
+void sauvegardetourprecedent(CasePlateau plateau[TAILLE_PLATEAU][TAILLE_PLATEAU], Joueur joueurs[], int nombredejoueurs, int joueurCourant) {
+
+    FILE *fichier = fopen("annulationcoup", "w");
+    if (fichier == NULL) {
+        printf("Erreur lors de la création du fichier de sauvegarde.\n");
+        return;
+    }
+
+    // Sauvegarder le nombre de joueurs et le joueur courant
+    fprintf(fichier, "%d\n", nombredejoueurs);
+    fprintf(fichier, "%d\n", joueurCourant);
+
+    // Sauvegarder les informations des joueurs
+    for (int i = 0; i < nombredejoueurs; i++) {
+        fprintf(fichier, "%s %c %d %d %d %d\n",
+                joueurs[i].nom,
+                joueurs[i].pion,
+                joueurs[i].nbBarriere,
+                joueurs[i].positionX,
+                joueurs[i].positionY,
+                joueurs[i].score);
+    }
+
+    // Sauvegarder l'état du plateau
+    for (int i = 0; i < TAILLE_PLATEAU; i++) {
+        for (int j = 0; j < TAILLE_PLATEAU; j++) {
+            fprintf(fichier, "%d %d %d %d %d %d %d %d\n",
+                    plateau[i][j].type,
+                    (int)plateau[i][j].symbole, // Symbole enregistré en entier
+                    plateau[i][j].barrierehaut,
+                    plateau[i][j].barrierebas,
+                    plateau[i][j].barrieregauche,
+                    plateau[i][j].barrieredroite,
+                    plateau[i][j].couleurtexte,
+                    plateau[i][j].couleurfond);
+        }
+    }
+
+    fclose(fichier);
+    printf("la partie est save\n");
 }

@@ -106,8 +106,8 @@ bool verifierFinDePartie(Joueur *joueur);
  * @param joueur Pointeur vers le joueur.
  * @param plateau Le plateau de jeu.
  */
-void annulerDernierCoup(Joueur *joueur, CasePlateau plateau[TAILLE_PLATEAU][TAILLE_PLATEAU]);
 
+void annulercoupprecedent();
 /**
  * @brief Sauvegarde la partie actuelle dans un fichier.
  *
@@ -119,4 +119,5 @@ void annulerDernierCoup(Joueur *joueur, CasePlateau plateau[TAILLE_PLATEAU][TAIL
 void sauvegarderPartie(CasePlateau plateau[TAILLE_PLATEAU][TAILLE_PLATEAU], Joueur joueurs[], int nombredejoueurs, int joueurCourant);
 
 void gererFinDePartie(Joueur joueurs[], int nombredejoueur, int joueurGagnantIndex, ScoreJoueur scores[], int *nbJoueursScores);
+void sauvegardetourprecedent(CasePlateau plateau[TAILLE_PLATEAU][TAILLE_PLATEAU], Joueur joueurs[], int nombredejoueurs, int joueurCourant);
 #endif // JEUX_H
